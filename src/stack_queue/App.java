@@ -23,9 +23,6 @@ public class App {
         test();
         queueWithTwoStacks();
 
-        while (true) {
-
-        }
     }
 
     private static void test() {
@@ -43,7 +40,7 @@ public class App {
     }
 
     private static void queueWithTwoStacks() {
-        QueueWithTwoStacks<Integer> queueWithTwoStacks = new QueueWithTwoStacks<>();
+        QueueWithTwoStacks<Integer> queueWithTwoStacks = new QueueWithTwoStacks<Integer>();
         queueWithTwoStacks.add(5);
         queueWithTwoStacks.add(3);
         queueWithTwoStacks.add(1);
@@ -77,7 +74,7 @@ public class App {
     }
 
     private static void randomQueue() {
-        RandomizedQueue<Integer> integers = new RandomizedQueue<>();
+        RandomizedQueue<Integer> integers = new RandomizedQueue<Integer>();
         integers.enqueue(1);
         integers.enqueue(2);
         integers.enqueue(3);
