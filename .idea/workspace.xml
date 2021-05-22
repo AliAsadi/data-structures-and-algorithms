@@ -2,15 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/union_find/MainApp.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/META-INF/Algorithms.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/App$AA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/ArrayDeque$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/ArrayDeque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/LinkedListDeque$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/LinkedListDeque$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/LinkedListDeque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/Permutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/QueueWithTwoStacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/RandomizedQueue$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/RandomizedQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/stack_queue/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/union_find/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/union_find/Percolation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/union_find/QuickFindUF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/union_find/QuickUnionUF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithms/union_find/WeightedQuickUnionUF.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1sqpakRglZIqpyo2stQkFTGGn0X" />
   <component name="ProjectViewState">
@@ -24,8 +60,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
