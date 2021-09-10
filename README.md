@@ -1,5 +1,5 @@
 # Algorithms
 Algorithms
 
-## Use
-* IntelliJ IDEA CE
+# Using
+IntelliJ IDEA Community Edition
