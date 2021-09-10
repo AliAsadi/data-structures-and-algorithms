@@ -30,4 +30,15 @@ public class QueueWithTwoStacks<T> {
                 ", out=" + out +
                 '}';
     }
+
+    public static void main(String[] args) {
+        QueueWithTwoStacks<Integer> queue = new QueueWithTwoStacks<>();
+        queue.add(5);
+        queue.add(3);
+        queue.add(1);
+
+        System.out.println("remove: " + queue.remove());
+        System.out.println("remove: " + queue.remove());
+        System.out.println("queue: " + queue.toString());
+    }
 }

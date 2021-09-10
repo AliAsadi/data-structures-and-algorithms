@@ -114,4 +114,29 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
                 ", items=" + Arrays.toString(items) +
                 '}';
     }
+
+    public static void main(String[] args) {
+        RandomizedQueue<Integer> queue = new RandomizedQueue<>();
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+        queue.enqueue(6);
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        StringBuilder builder = new StringBuilder();
+
+        queue.iterator().forEachRemaining(integer -> {
+            builder.append(integer).append(", ");
+        });
+
+        System.out.println("queue: " + builder.toString());
+        System.out.println("size = " + queue.size());
+        System.out.println(queue.toString());
+    }
 }

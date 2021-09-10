@@ -1,4 +1,5 @@
 package data_structure.stacks
+
 import java.lang.StringBuilder
 import java.util.*
 import kotlin.collections.ArrayList
@@ -38,4 +39,15 @@ class Stack<Item> {
         }
         return stringBuilder.toString()
     }
+}
+
+fun main() {
+    val stack = Stack<Int>()
+    stack.push(5)
+    stack.push(3)
+    stack.push(1)
+
+    println("peak: " + stack.peek())
+    println("pop: " + stack.pop())
+    println("stack: $stack")
 }

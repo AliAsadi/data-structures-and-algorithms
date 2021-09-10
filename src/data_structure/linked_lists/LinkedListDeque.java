@@ -151,4 +151,38 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
             throw new IllegalArgumentException();
         }
     }
+
+    public static void main(String[] args) {
+        LinkedListDeque<Integer> integers = new LinkedListDeque<>();
+        integers.addFirst(1);
+        integers.addFirst(2);
+        integers.addFirst(3);
+        integers.addLast(1);
+        integers.addFirst(1);
+        integers.addFirst(1);
+
+        integers.addLast(2);
+        integers.addFirst(2);
+        integers.addLast(5);
+
+        integers.removeLast();
+        integers.removeFirst();
+        integers.removeFirst();
+        integers.removeFirst();
+        integers.removeLast();
+        integers.removeLast();
+        integers.addFirst(2);
+        integers.addLast(5);
+
+        StringBuilder builder = new StringBuilder();
+
+        integers.iterator().forEachRemaining(integer -> {
+            builder.append(integer).append(", ");
+        });
+
+
+        System.out.println("deque: " + builder.toString());
+        System.out.println("size = " + integers.size());
+        System.out.println(integers.toString());
+    }
 }
