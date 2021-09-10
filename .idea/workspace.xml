@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="reverse">
-      <change afterPath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeSortedArrays.java" afterDir="false" />
+    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="merge sorted arrays">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,7 @@
       <recent name="data_structure.stacks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MergeSortedArrays">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="data_structure.App" />
       <module name="data-structures-and-algorithms" />
@@ -146,9 +146,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.MergeSortedArrays" />
         <item itemvalue="Application.Reverse" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631290481226</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="merge sorted arrays">
+      <created>1631294033797</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1631294033797</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +251,8 @@
     <MESSAGE value="create gitignore" />
     <MESSAGE value="update" />
     <MESSAGE value="reverse" />
-    <option name="LAST_COMMIT_MESSAGE" value="reverse" />
+    <MESSAGE value="merge sorted arrays" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge sorted arrays" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

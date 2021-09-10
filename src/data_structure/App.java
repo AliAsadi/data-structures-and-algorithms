@@ -10,93 +10,56 @@ import java.util.function.Consumer;
 
 public class App {
 
-    interface AA {
-        void aa();
-    }
-
     public static void main(String[] args) {
-        test();
-        test();
-        test();
-        test();
-        test();
-        test();
-        test();
-        queueWithTwoStacks();
-
-    }
-
-    private static void test() {
-        Consumer<Integer> aa = new Consumer<Integer>() {
-            @Override
-            public void accept(Integer integer) {
-                System.out.println("LOL" + integer);
-            }
-
-        };
-
-        aa.accept(5);
-        aa.accept(6);
-        aa.accept(7);
+//        queueWithTwoStacks();
+        randomizedQueue();
     }
 
     private static void queueWithTwoStacks() {
-        QueueWithTwoStacks<Integer> queueWithTwoStacks = new QueueWithTwoStacks<Integer>();
-        queueWithTwoStacks.add(5);
-        queueWithTwoStacks.add(3);
-        queueWithTwoStacks.add(1);
+        QueueWithTwoStacks<Integer> queue = new QueueWithTwoStacks<>();
+        queue.add(5);
+        queue.add(3);
+        queue.add(1);
 
-        System.out.println(queueWithTwoStacks.toString());
-
-        System.out.println(queueWithTwoStacks.remove());
-        System.out.println(queueWithTwoStacks.remove());
-        System.out.println(queueWithTwoStacks.remove());
-
-
+        System.out.println("remove: " + queue.remove());
+        System.out.println("remove: " + queue.remove());
+        System.out.println("queue: " + queue.toString());
     }
 
     private static void stack() {
-        Stack<Integer> ss = new Stack<>();
-        ss.push(5);
-        ss.push(5);
-        ss.push(5);
+        Stack<Integer> stack = new Stack<>();
+        stack.push(5);
+        stack.push(3);
+        stack.push(1);
 
-        System.out.println(ss.toString());
-        ss.peek();
-        ss.peek();
-        ss.peek();
-        ss.peek();
-
-        ss.pop();
-        ss.pop();
-
-
-        System.out.println(ss.toString());
+        System.out.println("peak: " + stack.peek());
+        System.out.println("pop: " + stack.pop());
+        System.out.println("stack: " + stack.toString());
     }
 
-    private static void randomQueue() {
-        RandomizedQueue<Integer> integers = new RandomizedQueue<Integer>();
-        integers.enqueue(1);
-        integers.enqueue(2);
-        integers.enqueue(3);
-        integers.enqueue(4);
-        integers.enqueue(5);
-        integers.enqueue(6);
+    private static void randomizedQueue() {
+        RandomizedQueue<Integer> queue = new RandomizedQueue<>();
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+        queue.enqueue(6);
 
-        integers.dequeue();
-        integers.dequeue();
-        integers.dequeue();
-        integers.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
 
         StringBuilder builder = new StringBuilder();
 
-        integers.iterator().forEachRemaining(integer -> {
+        queue.iterator().forEachRemaining(integer -> {
             builder.append(integer).append(", ");
         });
 
-        System.out.println(builder.toString());
-        System.out.println("size = " + integers.size());
-        System.out.println(integers.toString());
+        System.out.println("queue: " + builder.toString());
+        System.out.println("size = " + queue.size());
+        System.out.println(queue.toString());
     }
 
     private static void arrayDeque() {
@@ -110,8 +73,7 @@ public class App {
 
         integers.addLast(2);
         integers.addFirst(2);
-        integers.addLast( 5);
-//        integers.addLast( 5);
+        integers.addLast(5);
 
         integers.removeLast();
         integers.removeFirst();
@@ -120,7 +82,7 @@ public class App {
         integers.removeLast();
         integers.removeLast();
         integers.addFirst(2);
-        integers.addLast( 5);
+        integers.addLast(5);
 
         StringBuilder builder = new StringBuilder();
 
@@ -128,9 +90,8 @@ public class App {
             builder.append(integer).append(", ");
         });
 
-//        iterator.remove();
 
-        System.out.println(builder.toString());
+        System.out.println("deque: " + builder.toString());
         System.out.println("size = " + integers.size());
         System.out.println(integers.toString());
     }
