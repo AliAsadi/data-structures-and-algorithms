@@ -1,4 +1,6 @@
-package stack_queue;
+package data_structure.queues.questions;
+
+import data_structure.queues.RandomizedQueue;
 
 public class Permutation {
     public static void main(String[] args) {

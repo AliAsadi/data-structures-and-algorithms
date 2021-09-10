@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stack_queue/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stack_queue/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stack_queue/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/ArrayDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stack_queue/LinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/LinkedListDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/arrays/ArrayDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/LinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/linked_lists/LinkedListDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/Permutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/queues/questions/Permutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/QueueWithTwoStacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/queues/QueueWithTwoStacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/RandomizedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/queues/RandomizedQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/Stack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/stacks/Stack.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +52,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="data_structure.stacks" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="stack_queue.App" />
+      <option name="MAIN_CLASS_NAME" value="data_structure.App" />
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structure.*" />
+          <option name="PATTERN" value="data_structure.arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -159,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631284828099</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update">
+      <created>1631286477915</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631286477915</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

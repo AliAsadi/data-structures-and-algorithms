@@ -1,4 +1,4 @@
-package stack_queue;
+package data_structure.queues;
 
 import org.jetbrains.annotations.NotNull;
 

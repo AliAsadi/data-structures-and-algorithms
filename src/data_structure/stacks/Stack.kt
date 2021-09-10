@@ -1,4 +1,4 @@
-package stack_queue
+package data_structure.stacks
 import java.lang.StringBuilder
 import java.util.*
 import kotlin.collections.ArrayList

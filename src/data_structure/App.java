@@ -1,7 +1,10 @@
-package stack_queue;
+package data_structure;
 
 
-import data_structure.LinkedListDeque;
+import data_structure.linked_lists.LinkedListDeque;
+import data_structure.queues.QueueWithTwoStacks;
+import data_structure.queues.RandomizedQueue;
+import data_structure.stacks.Stack;
 
 import java.util.function.Consumer;
 
@@ -12,10 +15,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-
-
-
-
         test();
         test();
         test();

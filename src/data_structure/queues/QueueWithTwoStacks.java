@@ -1,17 +1,18 @@
-package stack_queue;
+package data_structure.queues;
+
+import data_structure.stacks.Stack;
 
 import java.util.*;
-import java.util.ArrayDeque;
 
 public class QueueWithTwoStacks<T> {
-    private final Stack<T> in = new Stack<>();
-    private final Stack<T> out = new Stack<>();
+    private final data_structure.stacks.Stack<T> in = new data_structure.stacks.Stack<>();
+    private final data_structure.stacks.Stack<T> out = new Stack<>();
 
-    void add(T item) {
+    public void add(T item) {
         in.push(item);
     }
 
-    T remove() {
+    public T remove() {
         if (in.isEmpty() && out.isEmpty()) {
             throw new NoSuchElementException();
         } else if (out.isEmpty()) {

@@ -1,4 +1,4 @@
-package data_structure;
+package data_structure.linked_lists;
 
 import org.jetbrains.annotations.NotNull;
 
