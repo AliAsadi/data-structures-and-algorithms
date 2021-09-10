@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+// Deque = Double Ended Queue
 public class LinkedListDeque<Item> implements Iterable<Item> {
 
     static class Node {

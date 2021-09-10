@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+// Deque = Double Ended Queue
 public class ArrayDeque<Item> implements Iterable<Item> {
 
     private Object[] items;
