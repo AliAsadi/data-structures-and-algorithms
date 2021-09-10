@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="remove out">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stack_queue/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/ArrayDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_queue/LinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/LinkedListDeque.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="stack_queue.*" />
+          <option name="PATTERN" value="data_structure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631284543631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create gitignore">
+      <created>1631284683763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631284683763</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1631284828099</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631284828099</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,8 +175,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update" />
     <MESSAGE value="remove out" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove out" />
+    <MESSAGE value="create gitignore" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

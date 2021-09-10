@@ -1,6 +1,8 @@
 package stack_queue;
 
 
+import data_structure.LinkedListDeque;
+
 import java.util.function.Consumer;
 
 public class App {
