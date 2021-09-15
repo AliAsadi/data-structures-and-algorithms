@@ -28,7 +28,6 @@
   </component>
   <component name="ProjectId" id="1sqpakRglZIqpyo2stQkFTGGn0X" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -49,7 +48,7 @@
       <recent name="data_structure.stacks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StackKt">
+  <component name="RunManager" selected="Application.FirstRecurringCharacter">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="union_find.App" />
       <module name="data-structures-and-algorithms" />
@@ -63,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data_structure.App" />
+    <configuration name="FirstRecurringCharacter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_structure.hash_table.questions.FirstRecurringCharacter" />
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structure.arrays.questions.*" />
+          <option name="PATTERN" value="data_structure.hash_table.questions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,19 +115,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
       <item itemvalue="Application.QueueWithTwoStacks" />
       <item itemvalue="Application.Permutation" />
       <item itemvalue="Application.App (1)" />
       <item itemvalue="Application.StackKt" />
+      <item itemvalue="Application.FirstRecurringCharacter" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FirstRecurringCharacter" />
         <item itemvalue="Application.StackKt" />
         <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.Permutation" />
         <item itemvalue="Application.QueueWithTwoStacks" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>

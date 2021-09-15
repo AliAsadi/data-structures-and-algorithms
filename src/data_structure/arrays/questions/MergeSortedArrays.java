@@ -5,15 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MergeSortedArrays {
-
-    //Create a function that merge sorted arrays
-    // input [0,3,4,31], [4,6,30]
-    // output [0, 3, 4, 4, 6, 30, 31]
-
-    // Questions:
-    // 1. The input could be null? or empty?
-    // 2. Are they only integer or could be float? negate values?
-    // 3. In case one of both null what we should return? or if one is null to return the second?
+    /**
+     * Create a function that merge sorted arrays
+     * input [0,3,4,31], [4,6,30]
+     * output [0, 3, 4, 4, 6, 30, 31]
+     **/
     public static void main(String[] args) {
         List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31), Arrays.asList(4, 6, 30));
 //        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
@@ -24,9 +20,19 @@ public class MergeSortedArrays {
         System.out.println(array);
     }
 
-    //1. Check inputs
+    //  Questions:
+    //  -----------
+    //  1. The input could be null? or empty?
+    //  2. Are they only integer or could be float? negate values?
+    //  3. In case one of both null what we should return? or if one is null to return the second?
     //
-    // BigO:
+    //  Rules:
+    // ------------
+    // 1. Check inputs
+    // 2. Check outputs
+    //
+    //  BigO:
+    // -------------
     // Time = O(n)
     // Space = O(n)
     public static List<Integer> mergeSortedArrays(List<Integer> array1, List<Integer> array2) {

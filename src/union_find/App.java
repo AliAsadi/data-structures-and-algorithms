@@ -1,9 +1,12 @@
 package union_find;
 
+import java.util.Hashtable;
+
 public class App {
     public static void main(String[] args) {
         Percolation percolation = new Percolation(5);
 
+        Hashtable<String,String> aa;
         percolation.open(3, 0);
         percolation.open(2, 0);
 
