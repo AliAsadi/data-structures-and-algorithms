@@ -68,7 +68,6 @@ public class HashMap<K, V> {
     private Node<K, V> getNode(K key) {
         int index = hash(key);
         Node<K, V> node = table[index];
-//            System.out.println("key: " + key + " hash:" + hash(key));
 
         while (node != null) {
             if (node.key.equals(key)) {
@@ -141,6 +140,29 @@ public class HashMap<K, V> {
                 '}';
     }
 
+    public void printMapCollision() {
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < table.length; i++) {
+            Node<K, V> node = table[i];
+            if (node != null) {
+                s.append("index:").append(i).append(" -> ");
+
+                while (node != null) {
+
+                    s.append("(").append(node.key).append(")");
+
+                    node = node.next;
+                    if (node != null) {
+                        s.append(" -> ");
+                    }
+                }
+                s.append(System.lineSeparator());
+            }
+        }
+
+        System.out.println(s.toString());
+    }
+
     private static class Node<K, V> {
         final K key;
         V value;
@@ -168,14 +190,15 @@ public class HashMap<K, V> {
         map.put("ali3", "aa");
         map.put("ali3", "test");
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 200000; i++) {
             map.put("" + i, "" + i);
         }
 
-        map.remove("ali");
+        map.remove("ali3");
 
-        System.out.println(map);
-        System.out.println(map.get("ali2"));
+        map.printMapCollision();
+//        System.out.println(map);
+        System.out.println(map.get("ali3"));
         System.out.println(map.hash("ali"));
     }
 }
