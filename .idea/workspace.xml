@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update" />
+    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/data_structure/hash_table/HashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,13 +45,14 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="data_structure.stacks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FirstRecurringCharacter">
+  <component name="RunManager" selected="Application.HashMap">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="union_find.App" />
       <module name="data-structures-and-algorithms" />
@@ -75,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Permutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data_structure.queues.questions.Permutation" />
+    <configuration name="HashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_structure.hash_table.HashMap" />
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structure.queues.questions.*" />
+          <option name="PATTERN" value="data_structure.hash_table.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QueueWithTwoStacks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data_structure.queues.QueueWithTwoStacks" />
+    <configuration name="Permutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_structure.queues.questions.Permutation" />
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structure.queues.*" />
+          <option name="PATTERN" value="data_structure.queues.questions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,19 +119,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.QueueWithTwoStacks" />
       <item itemvalue="Application.Permutation" />
       <item itemvalue="Application.App (1)" />
-      <item itemvalue="Application.StackKt" />
       <item itemvalue="Application.FirstRecurringCharacter" />
+      <item itemvalue="Application.StackKt" />
+      <item itemvalue="Application.HashMap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HashMap" />
         <item itemvalue="Application.FirstRecurringCharacter" />
         <item itemvalue="Application.StackKt" />
         <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.Permutation" />
-        <item itemvalue="Application.QueueWithTwoStacks" />
       </list>
     </recent_temporary>
   </component>
@@ -246,5 +250,22 @@
     <MESSAGE value="merge sorted arrays" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/data_structure/hash_table/HashMap.java</url>
+          <line>179</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="1 = {HashMap$Node@910} &quot;Node{key=ali, value=aa, next= 13}&quot;" />
+        <watch expression="((data_structure.hash_table.HashMap.Node[])((HashMap)this).table)[1]" custom="data_structure.hash_table.HashMap,data_structure.hash_table.HashMap.Node[]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
