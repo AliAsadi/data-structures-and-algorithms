@@ -164,7 +164,7 @@ public class HashMap<K, V> {
     public static void main(String[] args) {
         HashMap<String, String> map = new HashMap<>();
         map.put("ali", "aa");
-        map.put("ali2", "aa"); //Collision "ali" & "ali2" have the same hash value/
+        map.put("ali2", "aa"); //Collision "ali" & "ali2" have the same hash value (before the for loop and the resizing)
         map.put("ali3", "aa");
         map.put("ali3", "test");
 
