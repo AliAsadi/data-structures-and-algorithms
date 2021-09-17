@@ -50,25 +50,8 @@ public class BinarySearchTree {
     }
 
     public boolean remove(int value) {
-
-
         TreeNode nodeToRemove = head;
         TreeNode parent = head;
-
-        //first node
-//        if (value == nodeToRemove.value) {
-//
-//
-//            if (nodeToRemove.right != null) {
-//                TreeNode next = nodeToRemove.right;
-//                head = next;
-//                head.right = nodeToRemove.left;
-//            } else {
-//                head = head.left;
-//            }
-//            return true;
-//        }
-
 
         while (nodeToRemove != null) {
             if (value == nodeToRemove.value) { // FOUND
