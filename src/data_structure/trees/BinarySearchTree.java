@@ -49,6 +49,11 @@ public class BinarySearchTree {
         return false;
     }
 
+    /**
+     * 1. Check if the value exist.
+     * 2. Check if the node there is a (2 child's) or (1 child) or (Zero).
+     * 3. If there is 2 child's we loop to find the minimum node in the right subtree of the node the need we want to remove.
+     * **/
     public boolean remove(int value) {
         TreeNode nodeToRemove = head;
         TreeNode parent = head;
