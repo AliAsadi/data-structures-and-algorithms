@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/data_structure/trees/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/trees/utils/BinaryTreePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data_structure/trees/utils/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/trees/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/trees/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/trees/utils/BinaryTreePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/trees/utils/BinaryTreePrinter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,7 @@
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structure.trees.utils.*" />
+          <option name="PATTERN" value="data_structure.trees.utils.BinaryTreePrinter" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -261,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631876412496</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="update">
+      <created>1631882012214</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631882012214</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -9,10 +9,14 @@ import java.util.List;
  */
 public class BinaryTreePrinter {
 
-    public static <T extends Comparable<?>> void printNode(TreeNode root) {
+    public static <T extends Comparable<?>> void printVertical(TreeNode root) {
         int maxLevel = BinaryTreePrinter.maxLevel(root);
 
         printNodeInternal(Collections.singletonList(root), 1, maxLevel);
+    }
+
+    public static void printHorizontal(TreeNode head) {
+        System.out.println(head);
     }
 
     private static <T extends Comparable<?>> void printNodeInternal(List<TreeNode> nodes, int level, int maxLevel) {

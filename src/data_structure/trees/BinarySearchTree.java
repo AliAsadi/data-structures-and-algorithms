@@ -70,8 +70,8 @@ public class BinarySearchTree {
 
     @Override
     public String toString() {
-        BinaryTreePrinter.printNode(head);
-        System.out.println(head.toString());
+        BinaryTreePrinter.printVertical(head);
+        BinaryTreePrinter.printHorizontal(head);
         return "BinarySearchTree{ size=" + size + " }";
     }
 
