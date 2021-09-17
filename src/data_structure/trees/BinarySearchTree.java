@@ -78,16 +78,17 @@ public class BinarySearchTree {
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
-//        tree.add(5);
-//        tree.add(4);
-//        tree.add(20);
-//        tree.add(210);
-//        tree.add(59);
-//        tree.add(15);
+        tree.add(6);
+        tree.add(9);
+        tree.add(3);
+        tree.add(1);
+        tree.add(5);
+        tree.add(7);
+        tree.add(11);
 
-        for (int i = 0; i < 10; i++) {
-            tree.add((int) (Math.random() * 30));
-        }
+//        for (int i = 0; i < 10; i++) {
+//            tree.add((int) (Math.random() * 30));
+//        }
 
         System.out.println(tree);
         System.out.println(tree.contains(5));
