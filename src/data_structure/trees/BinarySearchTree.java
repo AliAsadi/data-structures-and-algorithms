@@ -71,7 +71,7 @@ public class BinarySearchTree {
 
 
         while (nodeToRemove != null) {
-            if (value == nodeToRemove.value) { //found
+            if (value == nodeToRemove.value) { // FOUND
                 if (nodeToRemove.right != null && nodeToRemove.left != null) {
                     removeNodeWithTwoChild(nodeToRemove, parent, value); //TWO CHILD
                 } else {
@@ -113,7 +113,10 @@ public class BinarySearchTree {
     }
 
     private void connectMinimumNodeToParent(TreeNode parent, TreeNode minimumNode, int value) {
-        if (value > parent.value) {
+        if (value == head.value) {
+            head = minimumNode;
+        } else if (value > parent.value) {
+
             parent.right = minimumNode;
         } else {
             parent.left = minimumNode;
@@ -121,8 +124,14 @@ public class BinarySearchTree {
     }
 
     private void connectMinimumNodeToRemovedNodeConnections(TreeNode minimumNode, TreeNode nodeToRemove) {
-        minimumNode.right = nodeToRemove.right; //Connect node to right side
-        minimumNode.left = nodeToRemove.left;   //Connect node to left side
+
+        if (minimumNode.right == null) { //If there is no connection to the minimumNode on the right side
+            minimumNode.right = nodeToRemove.right; //Connect node to right side
+        }
+
+        if (minimumNode.left == null) {  //If there is no connection to the minimumNode on the left side
+            minimumNode.left = nodeToRemove.left;   //Connect node to left side
+        }
     }
 
     private void disconnectMinimumNodeFromParent(TreeNode minimumNode, TreeNode minimumNodeParent) {
@@ -148,15 +157,6 @@ public class BinarySearchTree {
             }
         }
     }
-
-    private TreeNode getMin(TreeNode node) {
-        TreeNode temp = node;
-        while (temp != null) {
-            temp = temp.left;
-        }
-        return temp;
-    }
-
 
     public boolean contains(int value) {
         return getNodeByValue(value) != null;
@@ -192,7 +192,7 @@ public class BinarySearchTree {
         tree.add(28);
         tree.add(30);
         tree.add(22);
-        tree.add(21);
+//        tree.add(21);
         tree.add(8);
         tree.add(3);
         tree.add(1);
@@ -210,7 +210,11 @@ public class BinarySearchTree {
 //        tree.remove(11);
 //        tree.remove(28);
 //        tree.remove(20);
-//        tree.remove(6);
+        tree.remove(6);
+//        tree.add(19);
+        tree.remove(8);
+        tree.remove(28);
+        tree.remove(20);
 
         System.out.println(tree);
         System.out.println(tree.contains(5));

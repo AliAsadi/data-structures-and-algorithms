@@ -280,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631882262428</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update">
+      <created>1631904169783</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1631904169783</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,6 +317,16 @@
           <url>file://$PROJECT_DIR$/src/data_structure/hash_table/HashMap.java</url>
           <line>200</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/data_structure/trees/BinarySearchTree.java</url>
+          <line>214</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/data_structure/trees/BinarySearchTree.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
