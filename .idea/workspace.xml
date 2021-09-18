@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631905571191</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update">
+      <created>1631905873306</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1631905873306</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,7 +341,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/data_structure/trees/BinarySearchTree.java</url>
-          <line>202</line>
+          <line>200</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>

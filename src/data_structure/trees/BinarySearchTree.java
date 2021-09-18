@@ -28,7 +28,7 @@ public class BinarySearchTree {
 
         TreeNode temp = head;
 
-        while (temp != null) {
+        while (true) {
             if (value == temp.value) return false; //duplicate
 
             if (value > temp.value) {
@@ -45,8 +45,6 @@ public class BinarySearchTree {
                 temp = temp.left;
             }
         }
-
-        return false;
     }
 
     /**
