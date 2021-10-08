@@ -9,7 +9,7 @@ public class BubbleSort {
 
 
     /**
-     * In each loop, the larger number is moved to the last position, and the loop size is reduced.
+     * In each loop, the larger number is moved to the last position, and the loop size is reduced (skip the sorted indexes).
      * **/
     static void sort(int[] arr) {
         int operations = 0;
