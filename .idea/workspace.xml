@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/algorithms/sort/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/sort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/sort/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/sort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/sort/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/sort/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/sort/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/sort/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/sort/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633811995222</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update">
+      <created>1633812699168</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1633812699168</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -5,10 +5,21 @@ package algorithms.sort;
  */
 public class App {
     public static void main(String[] args) {
-        int[] arr = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+        //Random
+        int[] random = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 453, 345, 123, 345234, 112, 5, 1, 1, 5, 6, 12, 0};
 
-        BubbleSort.sort(arr.clone());
-        SelectionSort.sort(arr.clone());
-        InsertionSort.sort(arr.clone());
+        System.out.println("Random");
+        System.out.println("########################");
+        BubbleSort.sort(random.clone());
+        SelectionSort.sort(random.clone());
+        InsertionSort.sort(random.clone());
+
+        //Nearly sorted
+        System.out.println("\nNearly sorted");
+        System.out.println("########################");
+        int[] nearlySorted = {1, 2, 6, 2, 7, 8, 10, 20, 40, 55, 56, 57, 58, 58, 67, 68, 61, 2, 12, 13, 14, 15, 16, 17, 18, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28};
+        BubbleSort.sort(nearlySorted.clone());
+        SelectionSort.sort(nearlySorted.clone());
+        InsertionSort.sort(nearlySorted.clone());
     }
 }
