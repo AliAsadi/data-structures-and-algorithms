@@ -9,11 +9,14 @@ public class SelectionSort {
 
 
     static void sort(int[] arr) {
+        int operations = 0;
         for (int i = 0; i < arr.length; i++) {
+            operations++;
 
             int minIdx = i;
 
             for (int j = i; j < arr.length; j++) {
+                operations++;
                 if (arr[j] < arr[minIdx]) {
                     minIdx = j;
                 }
@@ -24,10 +27,12 @@ public class SelectionSort {
             arr[minIdx] = temp;
         }
 
+        System.out.println("Selection sort operations: " + operations);
     }
 
     public static void main(String[] args) {
-        int[] arr = {1199, 44, 6, 2, 1, 25252, 5, 63, 87, 283, 4, 0};
+        int[] arr = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+
         System.out.println(Arrays.toString(arr));
 
         sort(arr);

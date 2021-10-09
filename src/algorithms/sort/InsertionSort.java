@@ -8,13 +8,15 @@ import java.util.Arrays;
 public class InsertionSort {
 
     static void sort(int[] arr) {
-
+        int operations = 0;
         for (int i = 1; i < arr.length; i++) {
+            operations++;
             int currentNum = arr[i];
 
             int sortedArraySize = i - 1;
 
             while (sortedArraySize >= 0 && currentNum <= arr[sortedArraySize]) {
+                operations++;
                 arr[sortedArraySize + 1] = arr[sortedArraySize]; //Move it to the prev index.
                 sortedArraySize--;
             }
@@ -22,6 +24,8 @@ public class InsertionSort {
             arr[sortedArraySize + 1] = currentNum; // set the number in the right place and exist the loop.
 
         }
+
+        System.out.println("Insertion sort operations: " + operations);
 
     }
 

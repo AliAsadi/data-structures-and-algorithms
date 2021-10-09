@@ -24,7 +24,8 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println(operations);
+
+        System.out.println("Bubble sort operations: " + operations);
     }
 
     //bonus - i tried to implement it using while.
@@ -49,8 +50,7 @@ public class BubbleSort {
             skipIndexes++;
         }
 
-        System.out.println(operations);
-
+        System.out.println("Bubble sort operations: " + operations);
     }
 
     public static void main(String[] args) {
