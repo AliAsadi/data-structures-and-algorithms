@@ -1,5 +1,8 @@
 package algorithms.recursion;
 
+import algorithms.dynamic_programming.DynamicFibonacci;
+import data_structure.hash_table.HashMap;
+
 import java.util.ArrayList;
 
 /**
@@ -12,6 +15,8 @@ import java.util.ArrayList;
 //For example: fibonacciRecursive(6) should return 8
 
 public class Fibonacci {
+
+    int operations = 0;
 
     int fibonacciIterative(int n) { // O(n)
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -27,6 +32,8 @@ public class Fibonacci {
     }
 
     int fibonacciRecursive(int n) { // O(2^n)
+        operations++;
+
         if (n < 2) {
             return n;
         }
@@ -35,7 +42,13 @@ public class Fibonacci {
 
     public static void main(String[] args) {
         Fibonacci fibonacci = new Fibonacci();
-        System.out.println(fibonacci.fibonacciRecursive(4));
+        System.out.println("Slow: " + fibonacci.fibonacciRecursive(20));
+        System.out.println("Slow Operations: " + fibonacci.operations);
+
+        DynamicFibonacci dynamicFibonacci = new DynamicFibonacci();
+        System.out.println("DP: " + dynamicFibonacci.dynamicFibonacci(20));
+        System.out.println("DP Operations: " + dynamicFibonacci.operations);
+
 //        System.out.println(fibonacci.fibonacciIterative(7));
     }
 }

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/algorithms/sort/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/dynamic_programming/DynamicFibonacci.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/recursion/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/recursion/Fibonacci.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
       <recent name="data_structure.trees" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Fibonacci">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.sort.App" />
       <module name="data-structures-and-algorithms" />
@@ -75,6 +76,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicFibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.dynamic_programming.DynamicFibonacci" />
+      <module name="data-structures-and-algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithms.dynamic_programming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,33 +122,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.sort.SelectionSort" />
-      <module name="data-structures-and-algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Fibonacci" />
       <item itemvalue="Application.BubbleSort" />
-      <item itemvalue="Application.SelectionSort" />
       <item itemvalue="Application.InsertionSort" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.DynamicFibonacci" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Fibonacci" />
+        <item itemvalue="Application.DynamicFibonacci" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.InsertionSort" />
         <item itemvalue="Application.BubbleSort" />
-        <item itemvalue="Application.SelectionSort" />
-        <item itemvalue="Application.Fibonacci" />
       </list>
     </recent_temporary>
   </component>
@@ -371,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633813205361</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update">
+      <created>1633984645232</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1633984645232</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,7 +412,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/algorithms/recursion/Fibonacci.java</url>
-          <line>32</line>
+          <line>39</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
