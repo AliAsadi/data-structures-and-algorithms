@@ -9,7 +9,7 @@ public class DynamicFibonacci {
     private final HashMap<Integer, Integer> cache = new HashMap<>();
     public int operations = 0;
 
-    public int dynamicFibonacci(int n) {
+    public int dynamicFibonacci(int n) { //O(n)
         if (cache.get(n) != null) {
             return cache.get(n);
         }
