@@ -2,14 +2,14 @@ package data_structure.arrays.questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * Create a function that merge sorted arrays
  * Input [0,3,4,31], [4,6,30]
  * Output [0, 3, 4, 4, 6, 30, 31]
  **/
-public class MergeSortedArrays {
+public class MergeTwoSortedArrays {
 
     //  Questions:
     //  -----------
@@ -74,16 +74,6 @@ public class MergeSortedArrays {
         return mergedSortedArray.stream().mapToInt(Integer::intValue).toArray();// convert to array primitive
     }
 
-    /**
-     * Given K sorted arrays the task is to merge them into one sorted array.
-     * input {{1,2,3},{4,5,6},{7,8,9}}
-     * Output: {1,2,3,4,5,6,7,8,9}
-     **/
-    public static List<Integer> mergeSortedArrays(int[][] arrays) { // List<List<Integer>> arrays
-
-        return null;
-    }
-
     public static void main(String[] args) {
         int[] array = mergeSortedArrays(new int[]{0, 3, 4, 31}, new int[]{4, 6, 30});
 //        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
@@ -91,6 +81,7 @@ public class MergeSortedArrays {
 //        List<Integer> array = mergeSortedArrays( new ArrayList<>(), Arrays.asList(4, 6, 30));
 //        List<Integer> array = mergeSortedArrays(null, Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
 //        List<Integer> array = mergeSortedArrays(null, null);
+
         System.out.println(Arrays.toString(array));
     }
 

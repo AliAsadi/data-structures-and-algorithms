@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="TwoSum">
+    <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeKSortedArrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeSortedArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeTwoSortedArrays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +55,11 @@
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="data_structure.trees" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="data_structure.arrays.questions" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MergeSortedArrays">
+  <component name="RunManager" selected="Application.MergeKSortedArrays">
     <configuration name="DynamicFibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.dynamic_programming.DynamicFibonacci" />
       <module name="data-structures-and-algorithms" />
@@ -82,8 +86,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSortedArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data_structure.arrays.questions.MergeSortedArrays" />
+    <configuration name="MergeKSortedArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_structure.arrays.questions.MergeKSortedArrays" />
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
@@ -126,11 +130,11 @@
       <item itemvalue="Application.DynamicFibonacci" />
       <item itemvalue="Application.TwoSum" />
       <item itemvalue="Application.Reverse" />
-      <item itemvalue="Application.MergeSortedArrays" />
+      <item itemvalue="Application.MergeKSortedArrays" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MergeSortedArrays" />
+        <item itemvalue="Application.MergeKSortedArrays" />
         <item itemvalue="Application.Reverse" />
         <item itemvalue="Application.TwoSum" />
         <item itemvalue="Application.Fibonacci" />
@@ -420,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637336107926</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update">
+      <created>1637355160361</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1637355160361</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,9 +451,9 @@
     <MESSAGE value="create gitignore" />
     <MESSAGE value="reverse" />
     <MESSAGE value="merge sorted arrays" />
-    <MESSAGE value="update" />
     <MESSAGE value="TwoSum" />
-    <option name="LAST_COMMIT_MESSAGE" value="TwoSum" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
