@@ -4,21 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Create a function that merge sorted arrays
+ * Input [0,3,4,31], [4,6,30]
+ * Output [0, 3, 4, 4, 6, 30, 31]
+ **/
 public class MergeSortedArrays {
-    /**
-     * Create a function that merge sorted arrays
-     * input [0,3,4,31], [4,6,30]
-     * output [0, 3, 4, 4, 6, 30, 31]
-     **/
-    public static void main(String[] args) {
-        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31), Arrays.asList(4, 6, 30));
-//        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
-//        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), new ArrayList<>());
-//        List<Integer> array = mergeSortedArrays( new ArrayList<>(), Arrays.asList(4, 6, 30));
-//        List<Integer> array = mergeSortedArrays(null, Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
-//        List<Integer> array = mergeSortedArrays(null, null);
-        System.out.println(array);
-    }
 
     //  Questions:
     //  -----------
@@ -82,4 +73,15 @@ public class MergeSortedArrays {
 
         return mergedSortedArray;
     }
+
+    public static void main(String[] args) {
+        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31), Arrays.asList(4, 6, 30));
+//        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
+//        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), new ArrayList<>());
+//        List<Integer> array = mergeSortedArrays( new ArrayList<>(), Arrays.asList(4, 6, 30));
+//        List<Integer> array = mergeSortedArrays(null, Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
+//        List<Integer> array = mergeSortedArrays(null, null);
+        System.out.println(array);
+    }
+
 }

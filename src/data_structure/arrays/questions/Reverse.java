@@ -1,11 +1,11 @@
 package data_structure.arrays.questions;
 
+/**
+ * Create a function that reverses a a string.
+ * Input: "Hi My name is Ali"
+ * Output: "ilA si eman yM iH"
+ **/
 public class Reverse {
-
-    //Create a function that reverses a a string.
-    public static void main(String[] args) {
-        reverse("Hi My name is Ali");
-    }
 
     //1. Check Input
     public static void reverse(String string) {
@@ -31,5 +31,9 @@ public class Reverse {
         if (string != null && !string.isEmpty()) {
             System.out.print(new StringBuilder(string).reverse().toString());
         }
+    }
+
+    public static void main(String[] args) {
+        reverse("Hi My name is Ali");
     }
 }
