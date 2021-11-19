@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="TwoSum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_structure/hash_table/questions/FirstRecurringCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/hash_table/questions/FirstRecurringCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_structure/arrays/questions/MergeSortedArrays.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,20 +55,7 @@
       <recent name="data_structure.trees" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Reverse">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.sort.App" />
-      <module name="data-structures-and-algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MergeSortedArrays">
     <configuration name="DynamicFibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.dynamic_programming.DynamicFibonacci" />
       <module name="data-structures-and-algorithms" />
@@ -88,6 +75,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.recursion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortedArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_structure.arrays.questions.MergeSortedArrays" />
+      <module name="data-structures-and-algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="data_structure.arrays.questions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,18 +123,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Fibonacci" />
-      <item itemvalue="Application.App" />
       <item itemvalue="Application.DynamicFibonacci" />
       <item itemvalue="Application.TwoSum" />
       <item itemvalue="Application.Reverse" />
+      <item itemvalue="Application.MergeSortedArrays" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeSortedArrays" />
         <item itemvalue="Application.Reverse" />
         <item itemvalue="Application.TwoSum" />
         <item itemvalue="Application.Fibonacci" />
         <item itemvalue="Application.DynamicFibonacci" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -406,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637335901896</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="TwoSum">
+      <created>1637336021252</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1637336021252</updated>
+    </task>
+    <task id="LOCAL-00039" summary="TwoSum">
+      <created>1637336107926</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1637336107926</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

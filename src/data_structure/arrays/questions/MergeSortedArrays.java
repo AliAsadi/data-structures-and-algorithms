@@ -26,18 +26,18 @@ public class MergeSortedArrays {
     // -------------
     // Time = O(n)
     // Space = O(n)
-    public static List<Integer> mergeSortedArrays(List<Integer> array1, List<Integer> array2) {
+    public static int[] mergeSortedArrays(int[] array1, int[] array2) {
         ArrayList<Integer> mergedSortedArray = new ArrayList<>();
 
         if (array1 != null && array2 != null) {
             int index1 = 0;
             int index2 = 0;
 
-            while (index1 < array1.size()) {
-                int num1 = array1.get(index1);
+            while (index1 < array1.length) {
+                int num1 = array1[index1];
 
-                if (index2 < array2.size()) {
-                    int num2 = array2.get(index2);
+                if (index2 < array2.length) {
+                    int num2 = array2[index2];
 
                     if (num1 < num2) {
                         mergedSortedArray.add(num1);
@@ -54,14 +54,14 @@ public class MergeSortedArrays {
             }
 
             //If the second array is larger than the first and there are items left in it, add them to the list.
-            if (index2 < array2.size()) {
-                for (int i = index2; i < array2.size(); i++) {
-                    mergedSortedArray.add(array2.get(i));
+            if (index2 < array2.length) {
+                for (int i = index2; i < array2.length; i++) {
+                    mergedSortedArray.add(array2[i]);
                 }
             }
         } else {
             if (array1 == null && array2 == null) {
-                return mergedSortedArray;
+                return new int[]{};
             } else {
                 if (array1 == null) {
                     return array2;
@@ -71,17 +71,27 @@ public class MergeSortedArrays {
             }
         }
 
-        return mergedSortedArray;
+        return mergedSortedArray.stream().mapToInt(Integer::intValue).toArray();// convert to array primitive
+    }
+
+    /**
+     * Given K sorted arrays the task is to merge them into one sorted array.
+     * input {{1,2,3},{4,5,6},{7,8,9}}
+     * Output: {1,2,3,4,5,6,7,8,9}
+     **/
+    public static List<Integer> mergeSortedArrays(int[][] arrays) { // List<List<Integer>> arrays
+
+        return null;
     }
 
     public static void main(String[] args) {
-        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31), Arrays.asList(4, 6, 30));
+        int[] array = mergeSortedArrays(new int[]{0, 3, 4, 31}, new int[]{4, 6, 30});
 //        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
 //        List<Integer> array = mergeSortedArrays(Arrays.asList(0, 3, 4, 31, 177), new ArrayList<>());
 //        List<Integer> array = mergeSortedArrays( new ArrayList<>(), Arrays.asList(4, 6, 30));
 //        List<Integer> array = mergeSortedArrays(null, Arrays.asList(4, 6, 30, 55, 67, 70, 111, 200, 300));
 //        List<Integer> array = mergeSortedArrays(null, null);
-        System.out.println(array);
+        System.out.println(Arrays.toString(array));
     }
 
 }
