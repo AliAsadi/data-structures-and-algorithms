@@ -1,5 +1,7 @@
 package algorithms.sort;
 
+import java.util.Collections;
+
 /**
  * Created by Ali Asadi on 11/10/2021
  */

@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**
  * Created by Ali Asadi on 09/10/2021
+ *
+ * Best for nearly sorted arrays.
  */
 public class InsertionSort {
 
