@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c16944d-a76c-4db6-a3cb-3c4f88f91702" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/sort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/sort/InsertionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/sort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/sort/MergeSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,7 @@
       <recent name="data_structure.arrays.questions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.MergeSort">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.sort.App" />
       <module name="data-structures-and-algorithms" />
@@ -113,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Reverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="data_structure.arrays.questions.Reverse" />
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.sort.MergeSort" />
       <module name="data-structures-and-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structure.arrays.questions.*" />
+          <option name="PATTERN" value="algorithms.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,19 +126,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Reverse" />
       <item itemvalue="Application.MergeKSortedArrays" />
       <item itemvalue="Application.MergeKSortedLinkedList" />
       <item itemvalue="Application.LinkedListDeque" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.MergeSort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MergeSort" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.MergeKSortedLinkedList" />
         <item itemvalue="Application.LinkedListDeque" />
         <item itemvalue="Application.MergeKSortedArrays" />
-        <item itemvalue="Application.Reverse" />
       </list>
     </recent_temporary>
   </component>
@@ -446,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637413090348</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="update">
+      <created>1637414352447</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1637414352447</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -502,6 +508,21 @@
           <url>file://$PROJECT_DIR$/src/data_structure/arrays/questions/MergeKSortedArrays.java</url>
           <line>106</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithms/sort/MergeSort.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithms/sort/MergeSort.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithms/sort/MergeSort.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.StackOverflowError" package="java.lang" />
