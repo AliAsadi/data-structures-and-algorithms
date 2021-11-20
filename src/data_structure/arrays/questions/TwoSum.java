@@ -19,7 +19,7 @@ import java.util.HashMap;
  **/
 public class TwoSum {
 
-    //BruteForce O(n2)
+    //BruteForce O(n^2)
     public static int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
