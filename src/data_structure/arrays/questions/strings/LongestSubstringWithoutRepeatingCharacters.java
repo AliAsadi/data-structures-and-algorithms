@@ -20,6 +20,10 @@ import java.util.HashSet;
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     * **/
     public static int lengthOfLongestSubstring(String s) {
         char[] charArray = s.toCharArray();
 
