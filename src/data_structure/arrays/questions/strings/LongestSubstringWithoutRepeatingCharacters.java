@@ -37,8 +37,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
             int substringLength = 0;
 
             if (characters.contains(charArray[indexB])) {
-                substringLength = indexB - indexA; //check the length
-                characters.remove(charArray[indexA]); //remove the A char from the hash-set
+                substringLength = indexB - indexA;
+                characters.remove(charArray[indexA]);
                 indexA++;
 
                 if (indexA == indexB) {
