@@ -17,6 +17,9 @@ public class TrappingRainWater {
     /**
      * Time: O(n^2)
      * Space: O(1)
+     *
+     * The solution is to collect the current index's *maxLeft* and *maxRight* values, and get the min between them;
+     * Then subtract the *result* from the current index to find out how much water you hold.
      */
     public static int trap(int[] height) {
         int totalWater = 0;
