@@ -6,16 +6,16 @@ import java.util.HashSet;
 
 /**
  * Given a string s, find the length of the longest substring without repeating characters.
- * <p>
+ *
  * Input: s = "abcabcbb"
  * Output: 3
- * <p>
+ *
  * Input: s = "bbbbb"
  * Output: 1
- * <p>
+ *
  * Input: s = "pwwkew"
  * Output: 3
- * <p>
+ *
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class LongestSubstringWithoutRepeatingCharacters {
@@ -23,6 +23,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     public static int lengthOfLongestSubstring(String s) {
         char[] charArray = s.toCharArray();
         if (charArray.length == 0) return 0;
+        if (charArray.length == 1) return 1;
         int maxLength = 0;
 
         int indexA = 0;
@@ -31,8 +32,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         HashSet<Character> characters = new HashSet<>();
 
-        while (indexA < indexB) {
+        while (indexB < charArray.length) {
             int newMax = 0;
+
             characters.add(charArray[indexA]);
 
             if (characters.contains(charArray[indexB])) {
@@ -50,11 +52,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
             }
 
 
-
-            if (indexB >= charArray.length) {
-                newMax = indexB - indexA;
-                return Math.max(newMax, maxLength);
-            }
+            if (indexB == charArray.length) newMax = indexB - indexA;
 
             maxLength = Math.max(newMax, maxLength);
         }
@@ -70,7 +68,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
     public static int lengthOfLongestSubstring2(String s) {
         char[] charArray = s.toCharArray();
         int maxLength = 0;
-
 
         for (int i = 0; i < charArray.length; i++) {
             int newMax = 1;
@@ -98,5 +95,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         System.out.println(lengthOfLongestSubstring("bbbbb"));
         System.out.println(lengthOfLongestSubstring("pwwkew"));
         System.out.println(lengthOfLongestSubstring(""));
+        System.out.println(lengthOfLongestSubstring("abcdba"));
+        System.out.println(lengthOfLongestSubstring(" "));
     }
 }
