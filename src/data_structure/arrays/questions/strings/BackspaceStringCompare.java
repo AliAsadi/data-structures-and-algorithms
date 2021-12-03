@@ -3,7 +3,18 @@ package data_structure.arrays.questions.strings;
 import java.util.Stack;
 
 /**
- * Created by Ali Asadi on 03/12/2021
+ * Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+ * Note that after backspacing an empty text, the text will continue empty.
+ * <p>
+ * Input: s = "ab#c", t = "ad#c"
+ * Output: true
+ * Explanation: Both s and t become "ac".
+ * <p>
+ * Input: s = "ab##", t = "c#d#"
+ * Output: true
+ * Explanation: Both s and t become "".
+ * <p>
+ * Follow up: Can you solve it in O(n) time and O(1) space?
  */
 public class BackspaceStringCompare {
     public static boolean backspaceCompare(String s, String t) {
@@ -70,23 +81,31 @@ public class BackspaceStringCompare {
         int indexA = arrayA.length - 1;
         int indexB = arrayB.length - 1;
 
-        int charToSkipA = 0;
-        int charToSkipB = 0;
+        while (indexA >= 0 || indexB >= 0) {
 
-        while (indexA != 0 || indexB != 0) {
-            if (charToSkipA > 0) indexA--;
-            if (charToSkipB > 0) indexB--;
-            if (arrayA[indexA] == '#') charToSkipA++;
-            if (arrayB[indexB] == '#') charToSkipB++;
+            indexA = skipIndexes(arrayA, indexA);
+            indexB = skipIndexes(arrayB, indexB);
 
-            if (charToSkipA == 0 && charToSkipB == 0) {
-                if (arrayA[indexA] != arrayB[indexB]) return false;
-                indexA--;
-                indexB--;
-            }
+            if (indexA < 0 && indexB < 0) return true;
+            if (indexA < 0 || indexB < 0) return false;
+            if (arrayA[indexA] != arrayB[indexB]) return false;
+            indexA--;
+            indexB--;
         }
 
         return true;
+    }
+
+    static int skipIndexes(char[] array, int index) {
+        if (array[index] == '#') {
+            int charToSkip = 2;
+            while (charToSkip > 0) {
+                index--;
+                charToSkip--;
+                if (index >= 0 && array[index] == '#') charToSkip += 2;
+            }
+        }
+        return index;
     }
 
     public static void main(String[] args) {
@@ -94,5 +113,9 @@ public class BackspaceStringCompare {
         System.out.println(backspaceCompare("ab##", "c#d#"));
         System.out.println(backspaceCompare("a##c", "#a#c"));
         System.out.println(backspaceCompare("a#c", "b"));
+        System.out.println(backspaceCompare("2", "b"));
+        System.out.println(backspaceCompare("#", "b"));
+        System.out.println(backspaceCompare("##", "b##"));
+        System.out.println(backspaceCompare("##", "#"));
     }
 }
