@@ -15,9 +15,38 @@ package data_structure.arrays.questions;
 public class TrappingRainWater {
 
     /**
-     * Time: O(n^2)
+     * Time: O(n)
      * Space: O(1)
      *
+     * Set two pointers to the left and to the right;
+     */
+    public static int trapOptimal(int[] height) {
+        int totalWater = 0;
+
+        int leftIndex = 0;
+        int rightIndex = height.length - 1;
+
+        int maxLeft = height[leftIndex];
+        int maxRight = height[rightIndex];
+
+        while (leftIndex != rightIndex) {
+            if (maxLeft < maxRight) {
+                totalWater += maxLeft - height[leftIndex];
+                leftIndex++;
+                maxLeft = Math.max(maxLeft, height[leftIndex]);
+            } else {
+                totalWater += maxRight - height[rightIndex];
+                rightIndex--;
+                maxRight = Math.max(maxRight, height[rightIndex]);
+            }
+        }
+        return totalWater;
+    }
+
+    /**
+     * Time: O(n^2)
+     * Space: O(1)
+     * <p>
      * The solution is to collect the current index's *maxLeft* and *maxRight* values, and get the min between them;
      * Then subtract the *result* from the current index to find out how much water you hold.
      */
@@ -53,6 +82,9 @@ public class TrappingRainWater {
     public static void main(String[] args) {
         System.out.println(trap(new int[]{4, 2, 0, 3, 2, 5}));
         System.out.println(trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
+
+        System.out.println(trapOptimal(new int[]{4, 2, 0, 3, 2, 5}));
+        System.out.println(trapOptimal(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
 
     }
 
