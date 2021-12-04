@@ -1,6 +1,8 @@
 package data_structure.arrays.questions.strings;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 /**
  * Given a string s, find the length of the longest substring without repeating characters.
@@ -39,7 +41,25 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 seen.add(chars[right++]);
             }
 
-             maxLength = Math.max(maxLength, right - left);
+            maxLength = Math.max(maxLength, right - left);
+        }
+        return maxLength;
+    }
+
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     **/
+    public int lengthOfLongestSubstringSlidingWindow(String s) {
+        char[] chars = s.toCharArray();
+        int maxLength = 0;
+        Map<Character, Integer> seen = new HashMap<>();
+        for (int j = 0, i = 0; j < chars.length; j++) {
+            if (seen.containsKey(chars[j])) {
+                i = Math.max(seen.get(chars[j]), i);
+            }
+            maxLength = Math.max(maxLength, j - i + 1);
+            seen.put(chars[j], j + 1);
         }
         return maxLength;
     }
@@ -49,18 +69,18 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * Space: O(N)
      **/
     public static int lengthOfLongestSubstringBruteForce(String s) {
-        char[] charArray = s.toCharArray();
+        char[] chars = s.toCharArray();
         int maxLength = 0;
 
-        for (int i = 0; i < charArray.length; i++) {
+        for (int i = 0; i < chars.length; i++) {
             int newMax = 1;
 
-            HashSet<Character> seenChars = new HashSet<>();
-            seenChars.add(charArray[i]);
+            HashSet<Character> seen = new HashSet<>();
+            seen.add(chars[i]);
 
-            for (int j = i + 1; j < charArray.length; j++) {
-                if (!seenChars.contains(charArray[j])) {
-                    seenChars.add(charArray[j]);
+            for (int j = i + 1; j < chars.length; j++) {
+                if (!seen.contains(chars[j])) {
+                    seen.add(chars[j]);
                     newMax++;
                 } else {
                     break;
