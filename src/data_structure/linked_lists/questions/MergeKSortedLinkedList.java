@@ -1,4 +1,7 @@
-package data_structure.arrays.questions;
+package data_structure.linked_lists.questions;
+
+
+import data_structure.linked_lists.questions.utils.ListNode;
 
 import java.util.*;
 
@@ -75,17 +78,6 @@ public class MergeKSortedLinkedList {
 
         }
         return head;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 
 }
