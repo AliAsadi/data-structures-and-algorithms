@@ -1,9 +1,6 @@
 package data_structure.arrays.questions.strings;
 
-import data_structure.hash_table.HashMap;
-
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Given a string s, find the length of the longest substring without repeating characters.
@@ -27,9 +24,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
      **/
     public static int lengthOfLongestSubstring(String s) {
         char[] chars = s.toCharArray();
-
-        if (chars.length == 0) return 0;
-        if (chars.length == 1) return 1;
 
         int maxLength = 0;
         int left = 0;
