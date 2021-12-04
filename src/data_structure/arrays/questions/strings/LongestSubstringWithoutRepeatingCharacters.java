@@ -3,6 +3,7 @@ package data_structure.arrays.questions.strings;
 import data_structure.hash_table.HashMap;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Given a string s, find the length of the longest substring without repeating characters.
@@ -25,37 +26,26 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * Space: O(n)
      **/
     public static int lengthOfLongestSubstring(String s) {
-        char[] charArray = s.toCharArray();
+        char[] chars = s.toCharArray();
 
-        if (charArray.length == 0) return 0;
-        if (charArray.length == 1) return 1;
+        if (chars.length == 0) return 0;
+        if (chars.length == 1) return 1;
 
         int maxLength = 0;
-        int indexA = 0;
-        int indexB = 1;
+        int left = 0;
+        int right = 0;
 
-        HashSet<Character> seenChars = new HashSet<>();
-        seenChars.add(charArray[indexA]);
+        HashSet<Character> seen = new HashSet<>();
 
-        while (indexB < charArray.length) {
-            int substringLength = 0;
-
-            if (seenChars.contains(charArray[indexB])) {
-                substringLength = indexB - indexA;
-                seenChars.remove(charArray[indexA]);
-                indexA++;
-
-                if (indexA == indexB) {
-                    seenChars.add(charArray[indexB]);
-                    indexB++;
-                }
+        while (right < chars.length) {
+            if (seen.contains(chars[right])) {
+                seen.remove(chars[left++]);
+                if (left == right) seen.add(chars[right++]);
             } else {
-                seenChars.add(charArray[indexB]);
-                indexB++;
+                seen.add(chars[right++]);
             }
 
-            if (indexB == charArray.length) substringLength = indexB - indexA;
-            maxLength = Math.max(substringLength, maxLength);
+             maxLength = Math.max(maxLength, right - left);
         }
         return maxLength;
     }
@@ -89,6 +79,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
 
     public static void main(String[] args) {
+
         System.out.println(lengthOfLongestSubstring("abcabcbb"));
         System.out.println(lengthOfLongestSubstring("bbbbbabcde"));
         System.out.println(lengthOfLongestSubstring("bbbbb"));
