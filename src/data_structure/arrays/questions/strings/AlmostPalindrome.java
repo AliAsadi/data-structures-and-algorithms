@@ -17,6 +17,10 @@ package data_structure.arrays.questions.strings;
  */
 public class AlmostPalindrome {
 
+    /**
+     * Time: O(n)
+     * Space: O(1)
+     **/
     public static boolean isPalindrome(String s) {
         char[] chars = s.toCharArray();
         if (chars.length == 0) return true;
