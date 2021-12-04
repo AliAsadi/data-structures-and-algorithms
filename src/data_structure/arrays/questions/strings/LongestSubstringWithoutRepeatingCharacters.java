@@ -23,7 +23,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     /**
      * Time: O(n)
      * Space: O(n)
-     * **/
+     **/
     public static int lengthOfLongestSubstring(String s) {
         char[] charArray = s.toCharArray();
 
@@ -34,23 +34,23 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int indexA = 0;
         int indexB = 1;
 
-        HashSet<Character> characters = new HashSet<>();
-        characters.add(charArray[indexA]);
+        HashSet<Character> seenChars = new HashSet<>();
+        seenChars.add(charArray[indexA]);
 
         while (indexB < charArray.length) {
             int substringLength = 0;
 
-            if (characters.contains(charArray[indexB])) {
+            if (seenChars.contains(charArray[indexB])) {
                 substringLength = indexB - indexA;
-                characters.remove(charArray[indexA]);
+                seenChars.remove(charArray[indexA]);
                 indexA++;
 
                 if (indexA == indexB) {
-                    characters.add(charArray[indexB]);
+                    seenChars.add(charArray[indexB]);
                     indexB++;
                 }
             } else {
-                characters.add(charArray[indexB]);
+                seenChars.add(charArray[indexB]);
                 indexB++;
             }
 
@@ -71,15 +71,15 @@ public class LongestSubstringWithoutRepeatingCharacters {
         for (int i = 0; i < charArray.length; i++) {
             int newMax = 1;
 
-            HashSet<Character> characters = new HashSet<>();
-            characters.add(charArray[i]);
+            HashSet<Character> seenChars = new HashSet<>();
+            seenChars.add(charArray[i]);
 
             for (int j = i + 1; j < charArray.length; j++) {
-                if (characters.contains(charArray[j])) {
-                    break;
-                } else {
-                    characters.add(charArray[j]);
+                if (!seenChars.contains(charArray[j])) {
+                    seenChars.add(charArray[j]);
                     newMax++;
+                } else {
+                    break;
                 }
             }
             maxLength = Math.max(newMax, maxLength);
