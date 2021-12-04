@@ -54,7 +54,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * Time: O(N^2)
      * Space: O(N)
      **/
-    public static int lengthOfLongestSubstring2(String s) {
+    public static int lengthOfLongestSubstringBruteForce(String s) {
         char[] charArray = s.toCharArray();
         int maxLength = 0;
 
