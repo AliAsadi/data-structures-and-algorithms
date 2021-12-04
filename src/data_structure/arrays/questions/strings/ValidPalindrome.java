@@ -32,8 +32,8 @@ public class ValidPalindrome {
         int left = 0;
         int right = chars.length - 1;
         while (left < right) {
-            while (!Character.isLetterOrDigit(chars[left])) left++;
-            while (!Character.isLetterOrDigit(chars[right])) right--;
+            while (left < right && !Character.isLetterOrDigit(chars[left])) left++;
+            while (left < right && !Character.isLetterOrDigit(chars[right])) right--;
 
             if (Character.toLowerCase(chars[left]) == Character.toLowerCase(chars[right])) {
                 left++;
@@ -46,11 +46,13 @@ public class ValidPalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
-        System.out.println(isPalindrome("race a car"));
-        System.out.println(isPalindrome(" "));
-        System.out.println(isPalindrome("9559"));
-        System.out.println(isPalindrome("5995"));
-        System.out.println(isPalindrome("wsa"));
+        System.out.println(isPalindrome(".,"));
+
+//        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
+//        System.out.println(isPalindrome("race a car"));
+//        System.out.println(isPalindrome(" "));
+//        System.out.println(isPalindrome("9559"));
+//        System.out.println(isPalindrome("5995"));
+//        System.out.println(isPalindrome("wsa"));
     }
 }
