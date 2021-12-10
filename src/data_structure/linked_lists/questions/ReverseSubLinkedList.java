@@ -17,6 +17,12 @@ import data_structure.linked_lists.questions.utils.Utils;
  */
 public class ReverseSubLinkedList {
 
+    /**
+     * Utilize the original list
+     * <p>
+     * Time: O(n)
+     * Space O(1)
+     **/
     public static ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode current = head;
         ListNode leftToLeft = head;
