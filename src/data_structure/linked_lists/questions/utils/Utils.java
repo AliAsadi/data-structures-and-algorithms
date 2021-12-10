@@ -57,4 +57,15 @@ public class Utils {
         }
         return head;
     }
+
+    public static void print(ListNode head) {
+        if (head == null) return;
+        StringBuilder builder = new StringBuilder();
+        while (head.next != null) {
+            builder.append(head.val).append(", ");
+            head = head.next;
+        }
+        builder.append(head.val);
+        System.out.print(builder.toString());
+    }
 }

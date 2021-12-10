@@ -6,6 +6,7 @@ import data_structure.linked_lists.questions.utils.ListNode;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+import static data_structure.linked_lists.questions.utils.Utils.print;
 import static data_structure.linked_lists.questions.utils.Utils.sortedLinkedList;
 
 /**
@@ -55,13 +56,8 @@ public class MergeKSortedLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode[] nodeArray = new ListNode[]{sortedLinkedList(10, 20), sortedLinkedList(0, 5), sortedLinkedList(30, 34)};
-
-        ListNode head = mergeKLists(nodeArray);
-
-        while (head != null) {
-            System.out.print(head.val + ", ");
-            head = head.next;
-        }
+        ListNode[] array = new ListNode[]{sortedLinkedList(10, 20), sortedLinkedList(0, 5), sortedLinkedList(30, 34)};
+        ListNode head = mergeKLists(array);
+        print(head);
     }
 }
