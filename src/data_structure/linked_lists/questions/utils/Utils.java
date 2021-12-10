@@ -45,7 +45,7 @@ public class Utils {
         ListNode head = null;
         ListNode arr = null;
         Random random = new Random();
-        for (int i = from; i < to; i++) {
+        for (int i = from; i < to + 1; i++) {
             if (head == null) {
                 head = new ListNode();
                 arr = head;
@@ -66,6 +66,6 @@ public class Utils {
             head = head.next;
         }
         builder.append(head.val);
-        System.out.print(builder.toString());
+        System.out.println(builder.toString());
     }
 }
