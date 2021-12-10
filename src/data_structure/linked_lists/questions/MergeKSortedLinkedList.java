@@ -2,12 +2,11 @@ package data_structure.linked_lists.questions;
 
 
 import data_structure.linked_lists.questions.utils.ListNode;
-import data_structure.linked_lists.questions.utils.Utils;
-import jdk.jshell.execution.Util;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
-import static data_structure.linked_lists.questions.utils.Utils.*;
+import static data_structure.linked_lists.questions.utils.Utils.sortedLinkedList;
 
 /**
  * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
