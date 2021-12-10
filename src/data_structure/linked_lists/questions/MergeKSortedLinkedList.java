@@ -2,16 +2,20 @@ package data_structure.linked_lists.questions;
 
 
 import data_structure.linked_lists.questions.utils.ListNode;
+import data_structure.linked_lists.questions.utils.Utils;
+import jdk.jshell.execution.Util;
 
 import java.util.*;
+
+import static data_structure.linked_lists.questions.utils.Utils.*;
 
 /**
  * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
  * Merge all the linked-lists into one sorted linked-list and return it.
- *
+ * <p>
  * input {{1,2,3},{4,5,6},{7,8,9}}
  * Output: {1,2,3,4,5,6,7,8,9}
- *
+ * <p>
  * https://leetcode.com/problems/merge-k-sorted-lists/
  **/
 public class MergeKSortedLinkedList {
@@ -52,7 +56,7 @@ public class MergeKSortedLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode[] nodeArray = new ListNode[]{generateLinkedList(10, 20), generateLinkedList(0, 5), generateLinkedList(30, 34)};
+        ListNode[] nodeArray = new ListNode[]{sortedLinkedList(10, 20), sortedLinkedList(0, 5), sortedLinkedList(30, 34)};
 
         ListNode head = mergeKLists(nodeArray);
 
@@ -61,23 +65,4 @@ public class MergeKSortedLinkedList {
             head = head.next;
         }
     }
-
-    private static ListNode generateLinkedList(int from, int to) {
-        ListNode head = null;
-        ListNode arr = null;
-        for (int i = from; i < to; i++) {
-            if (head == null) {
-                head = new ListNode();
-                arr = head;
-
-                head.val = i;
-            } else {
-                arr.next = new ListNode(i);
-                arr = arr.next;
-            }
-
-        }
-        return head;
-    }
-
 }
