@@ -24,10 +24,10 @@ public class LinkedListCycleII {
      * **/
     public static ListNode detectCycle(ListNode head) {
         ListNode current = head;
-        Set<ListNode> set = new HashSet<>();
+        Set<ListNode> visited = new HashSet<>();
         while (current != null) {
-            if (set.contains(current)) return current;
-            set.add(current);
+            if (visited.contains(current)) return current;
+            visited.add(current);
             current = current.next;
         }
         return null;
