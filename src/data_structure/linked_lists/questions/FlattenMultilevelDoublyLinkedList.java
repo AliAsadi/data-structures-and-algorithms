@@ -1,7 +1,5 @@
 package data_structure.linked_lists.questions;
 
-import data_structure.linked_lists.questions.utils.Node;
-
 /**
  * https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
  */
@@ -26,5 +24,12 @@ public class FlattenMultilevelDoublyLinkedList {
             }
         }
         return head;
+    }
+
+    public static class Node {
+        public int val;
+        public Node prev;
+        public Node next;
+        public Node child;
     }
 }
