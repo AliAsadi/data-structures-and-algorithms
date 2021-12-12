@@ -1,4 +1,4 @@
-package data_structure.linked_lists;
+package data_structure.linked_lists.questions;
 
 import data_structure.linked_lists.questions.utils.ListNode;
 
