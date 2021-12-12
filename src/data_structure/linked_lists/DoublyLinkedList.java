@@ -5,8 +5,17 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-// Deque = Double Ended Queue
-public class LinkedListDeque<Item> implements Iterable<Item> {
+/**
+ * The default java {@link java.util.LinkedList} is a doubly-linked list the implement the {@link java.util.Deque} interface.
+ *
+ * This class is a doubly-linked list that implements the deque concept the same as default java implementation.
+ *
+ * Deque(Double Ended Queue) ->    is an abstract data structure "interface". It can be implemented either using
+ *                                 a linked list or an array; it describes what you can do with a data structure.
+ *
+ * Doubly-Linked list ->           is a concrete data structure, It is a way for storing data.
+ * **/
+public class DoublyLinkedList<Item> implements Iterable<Item>  {
 
     static class Node {
         Object value;
@@ -28,7 +37,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
     private int size = 0;
 
     // construct an empty deque
-    public LinkedListDeque() {}
+    public DoublyLinkedList() {}
 
     // is the deque empty?
     public boolean isEmpty() {
@@ -153,7 +162,7 @@ public class LinkedListDeque<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        LinkedListDeque<Integer> integers = new LinkedListDeque<>();
+        DoublyLinkedList<Integer> integers = new DoublyLinkedList<>();
         integers.addFirst(1);
         integers.addFirst(2);
         integers.addFirst(3);
