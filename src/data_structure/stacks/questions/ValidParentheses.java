@@ -47,7 +47,6 @@ public class ValidParentheses {
                 if (stack.isEmpty()) return false;
                 if (map.get(stack.pop()) != ch) return false;
             }
-
         }
 
         return stack.isEmpty();
