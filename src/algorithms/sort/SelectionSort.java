@@ -7,7 +7,13 @@ import java.util.Arrays;
  */
 public class SelectionSort {
 
-
+    /**
+     * Time: O(n^2)
+     * Space: O(1)
+     *
+     * Q: WHEN TO USE?
+     * A: NEVER
+     * **/
     static void sort(int[] arr) {
         int operations = 0;
         for (int i = 0; i < arr.length; i++) {

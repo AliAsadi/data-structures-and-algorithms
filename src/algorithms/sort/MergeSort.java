@@ -14,6 +14,13 @@ public class MergeSort {
         System.out.println("MergeSort operations: " + operations);
     }
 
+    /**
+     * Time: O(n log(n))
+     * Space: O(n)
+     *
+     * Q: WHEN TO USE?
+     * A: When it comes to large datasets and you don't care about space complexity.
+     * **/
     static int[] sort(int[] arr) {
         if (arr.length == 1) return arr;
 

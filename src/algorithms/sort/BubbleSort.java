@@ -10,6 +10,12 @@ public class BubbleSort {
 
     /**
      * In each loop, the larger number is moved to the last position, and the loop size is reduced (skip the sorted indexes).
+     *
+     * Time: O(n^2)
+     * Space: O(1)
+     *
+     * Q: WHEN TO USE?
+     * A: NEVER
      * **/
     static void sort(int[] arr) {
         int operations = 0;

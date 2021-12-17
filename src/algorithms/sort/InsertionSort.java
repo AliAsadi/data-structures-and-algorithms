@@ -9,6 +9,13 @@ import java.util.Arrays;
  */
 public class InsertionSort {
 
+    /**
+     * Time: Average: O(n^2) || Best: O(n)
+     * Space: O(1)
+     *
+     * Q: WHEN TO USE?
+     * A: When it comes to small datasets or data sets that are nearly sorted.
+     * **/
     static void sort(int[] arr) {
         int operations = 0;
         for (int i = 1; i < arr.length; i++) {
