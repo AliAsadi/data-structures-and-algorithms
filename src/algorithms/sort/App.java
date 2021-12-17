@@ -13,6 +13,7 @@ public class App {
         BubbleSort.sort(random.clone());
         SelectionSort.sort(random.clone());
         InsertionSort.sort(random.clone());
+        MergeSort.sortAndPrintOperationsNum(random.clone());
 
         //Nearly sorted
         System.out.println("\nNearly sorted");
@@ -21,5 +22,6 @@ public class App {
         BubbleSort.sort(nearlySorted.clone());
         SelectionSort.sort(nearlySorted.clone());
         InsertionSort.sort(nearlySorted.clone());
+        MergeSort.sortAndPrintOperationsNum(nearlySorted.clone());
     }
 }
