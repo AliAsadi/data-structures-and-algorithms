@@ -13,7 +13,7 @@ public class QueueWithTwoStacks<T> {
     }
 
     public T remove() {
-        if (in.isEmpty() && out.isEmpty()) {
+        if (isEmpty()) {
             throw new NoSuchElementException();
         } else if (out.isEmpty()) {
             while (!in.isEmpty()) {
@@ -21,6 +21,19 @@ public class QueueWithTwoStacks<T> {
             }
         }
         return out.pop();
+    }
+
+    public T peek() {
+        if (!isEmpty() && out.isEmpty()) {
+            while (!in.isEmpty()) {
+                out.push(in.pop());
+            }
+        }
+        return out.peek();
+    }
+
+    public boolean isEmpty() {
+        return in.isEmpty() && out.isEmpty();
     }
 
     @Override
