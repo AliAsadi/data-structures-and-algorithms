@@ -10,7 +10,7 @@ import java.util.Stack;
  */
 public class ImplementQueueUsingStacks {
 
-    static class MyQueue {
+    private static class MyQueue {
 
         private final Stack<Integer> in = new Stack<>();
         private final Stack<Integer> out = new Stack<>();
