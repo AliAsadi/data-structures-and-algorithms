@@ -16,9 +16,10 @@ public class App {
         MergeSort.sortAndPrintOperationsNum(random.clone());
 
         //Nearly sorted
+        int[] nearlySorted = {1, 2, 6, 2, 7, 8, 10, 20, 40, 55, 56, 57, 58, 58, 67, 68, 61, 2, 12, 13, 14, 15, 16, 17, 18, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28};
+
         System.out.println("\nNearly sorted");
         System.out.println("########################");
-        int[] nearlySorted = {1, 2, 6, 2, 7, 8, 10, 20, 40, 55, 56, 57, 58, 58, 67, 68, 61, 2, 12, 13, 14, 15, 16, 17, 18, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28};
         BubbleSort.sort(nearlySorted.clone());
         SelectionSort.sort(nearlySorted.clone());
         InsertionSort.sort(nearlySorted.clone());
