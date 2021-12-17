@@ -15,12 +15,7 @@ public class Permutation {
         randomizedQueue.enqueue("H");
         randomizedQueue.enqueue("I");
 
-
-        int N = 3;
-
-        for (int i = 0; i < N; i++) {
-            System.out.println(randomizedQueue.dequeue());
-        }
+        for (int i = 0; i < 3; i++) System.out.println(randomizedQueue.dequeue());
 
     }
 }
