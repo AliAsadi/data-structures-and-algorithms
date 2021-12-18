@@ -36,17 +36,14 @@ public class KthLargestElementInArray {
     public static int findKthLargestPriorityQueue(int[] nums, int k) {
         final PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int val : nums) {
-            pq.offer(val);
-
-            if (pq.size() > k) {
-                pq.poll();
-            }
+            pq.add(val);
+            if (pq.size() > k) pq.poll();
         }
         return pq.peek();
     }
 
     public static void main(String[] args) {
         int[] arr = {3, 2, 1, 5, 6, 4};
-        System.out.println(findKthLargest(arr,2));
+        System.out.println(findKthLargestPriorityQueue(arr,2));
     }
 }
