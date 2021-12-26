@@ -79,6 +79,11 @@ public class HashMap<K, V> {
         return null;
     }
 
+    /**
+     * Time Complexity
+     * Best: O(1)
+     * Worst: O(n)
+     * **/
     @Nullable
     public V remove(K key) {
         int index = hash(key);
