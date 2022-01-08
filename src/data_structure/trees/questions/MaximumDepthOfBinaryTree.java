@@ -3,6 +3,9 @@ package data_structure.trees.questions;
 import data_structure.trees.BinarySearchTree;
 import data_structure.trees.utils.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * Given the root of a binary tree, return its maximum depth.
  * A binary tree's maximum depth is the number of nodes along the longest path from
@@ -19,6 +22,10 @@ public class MaximumDepthOfBinaryTree {
         return dfs(root);
     }
 
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     * **/
     private static int dfs(TreeNode root) {
         if (root == null) {
             return 0;
@@ -28,6 +35,29 @@ public class MaximumDepthOfBinaryTree {
         int maxRight = dfs(root.right);
 
         return Math.max(maxLeft, maxRight) + 1;
+    }
+
+    public static int bfs(TreeNode root) {
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(root);
+
+        int level = 0;
+
+        while (!queue.isEmpty()) {
+            level++;
+
+            Queue<TreeNode> tempQueue = new ArrayDeque<>();
+
+            while (!queue.isEmpty()) {
+                TreeNode node = queue.poll();
+                if (node.left != null) tempQueue.add(node.left);
+                if (node.right != null) tempQueue.add(node.right);
+            }
+
+            queue = tempQueue;
+        }
+
+        return level;
     }
 
     public static void main(String[] args) {
@@ -50,7 +80,6 @@ public class MaximumDepthOfBinaryTree {
         tree.add(5);
         tree.printHorizontal();
 
-        int maxDepth = maxDepth(tree.getHead());
-        System.out.println("Max Depth = " + maxDepth);
+        System.out.println("Max Depth = " + maxDepth(tree.getHead()));
     }
 }
