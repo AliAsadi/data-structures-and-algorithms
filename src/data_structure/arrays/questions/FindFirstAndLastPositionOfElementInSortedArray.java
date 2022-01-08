@@ -9,6 +9,10 @@ import java.util.Arrays;
  */
 public class FindFirstAndLastPositionOfElementInSortedArray {
 
+    /**
+     * Binary Search
+     * Time: O(log n)
+     * **/
     public static int[] searchRange(int[] nums, int target) {
         int[] notFound = new int[]{-1, -1};
         if (nums.length == 0) return notFound;
