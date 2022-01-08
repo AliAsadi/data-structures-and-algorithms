@@ -21,6 +21,10 @@ public class BinaryTreeLevelOrderTraversal {
         return bfs(root);
     }
 
+    /**
+     * Time: O(n)
+     * Space: ?
+     * **/
     public static List<List<Integer>> bfs(TreeNode root) {
         if (root == null) return new ArrayList<>();
 
@@ -46,6 +50,33 @@ public class BinaryTreeLevelOrderTraversal {
         return tree;
     }
 
+    /**
+     * remove the tempQueue (Improve space complexity?)
+     * **/
+    public static List<List<Integer>> bfs2(TreeNode root) {
+        if (root == null) return new ArrayList<>();
+
+        List<List<Integer>> tree = new ArrayList<>();
+
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            ArrayList<Integer> levelValues = new ArrayList<>();
+            int leveSize = queue.size();
+
+            for (int i = 0; i < leveSize; i++) {
+                TreeNode node = queue.poll();
+                levelValues.add(node.value);
+                if (node.left != null) queue.add(node.left);
+                if (node.right != null) queue.add(node.right);
+            }
+            tree.add(levelValues);
+        }
+
+        return tree;
+    }
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.add(6);
@@ -62,5 +93,6 @@ public class BinaryTreeLevelOrderTraversal {
         tree.add(5);
 
         System.out.println(levelOrder(tree.getHead()));
+        System.out.println(bfs2(tree.getHead()));
     }
 }
