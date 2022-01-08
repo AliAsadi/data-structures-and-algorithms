@@ -37,6 +37,10 @@ public class MaximumDepthOfBinaryTree {
         return Math.max(maxLeft, maxRight) + 1;
     }
 
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     * **/
     public static int bfs(TreeNode root) {
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
