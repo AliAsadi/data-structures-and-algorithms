@@ -27,7 +27,7 @@ public class BinaryTreeRightSideView {
     /**
      * Time: O(n)
      * Space: O(n)
-     * **/
+     **/
     public static List<Integer> bfs(TreeNode root) {
         if (root == null) return new ArrayList<>();
         ArrayList<Integer> result = new ArrayList<>();
@@ -48,6 +48,24 @@ public class BinaryTreeRightSideView {
         return result;
     }
 
+    /**
+     * Another option for solving the question (DFS)
+     * **/
+    public static ArrayList<Integer> dfs(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        dfs(root, result, 1);
+        return result;
+    }
+
+    private static void dfs(TreeNode root, ArrayList<Integer> result, int level) {
+        if (root == null) return;
+
+        if (level > result.size()) result.add(root.value);
+
+        dfs(root.right, result, level + 1);
+        dfs(root.left, result, level + 1);
+    }
+
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
@@ -65,6 +83,7 @@ public class BinaryTreeRightSideView {
         tree.add(5);
         tree.printHorizontal();
 
-        System.out.println(rightSideView(tree.getHead()));
+//        System.out.println(rightSideView(tree.getHead()));
+        System.out.println(dfs(tree.getHead()));
     }
 }
