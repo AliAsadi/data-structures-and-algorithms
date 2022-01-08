@@ -25,7 +25,7 @@ public class BinaryTreeLevelOrderTraversal {
 
     /**
      * Time: O(n)
-     * Space: ?
+     * Space: O(n)
      * **/
     public static List<List<Integer>> bfs(TreeNode root) {
         if (root == null) return new ArrayList<>();

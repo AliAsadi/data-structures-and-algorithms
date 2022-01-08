@@ -23,6 +23,11 @@ public class BinaryTreeRightSideView {
         return bfs(root);
     }
 
+
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     * **/
     public static List<Integer> bfs(TreeNode root) {
         if (root == null) return new ArrayList<>();
         ArrayList<Integer> result = new ArrayList<>();
