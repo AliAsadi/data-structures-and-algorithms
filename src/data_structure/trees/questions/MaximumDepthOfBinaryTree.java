@@ -1,5 +1,6 @@
 package data_structure.trees.questions;
 
+import data_structure.trees.BinarySearchTree;
 import data_structure.trees.utils.TreeNode;
 
 /**
@@ -15,10 +16,41 @@ import data_structure.trees.utils.TreeNode;
 public class MaximumDepthOfBinaryTree {
 
     public static int maxDepth(TreeNode root) {
-        return 0;
+        return dfs(root);
+    }
+
+    private static int dfs(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int maxLeft = dfs(root.left);
+        int maxRight = dfs(root.right);
+
+        return Math.max(maxLeft, maxRight) + 1;
     }
 
     public static void main(String[] args) {
 
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(6);
+        tree.add(20);
+        tree.add(28);
+        tree.add(123);
+        tree.add(1231);
+        tree.add(12312);
+        tree.add(122234);
+        tree.add(1231223);
+        tree.add(12312231);
+        tree.add(30);
+        tree.add(22);
+        tree.add(8);
+        tree.add(3);
+        tree.add(1);
+        tree.add(5);
+        tree.printHorizontal();
+
+        int maxDepth = maxDepth(tree.getHead());
+        System.out.println("Max Depth = " + maxDepth);
     }
 }

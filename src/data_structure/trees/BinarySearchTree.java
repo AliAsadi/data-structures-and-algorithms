@@ -163,11 +163,19 @@ public class BinarySearchTree {
         return null;
     }
 
+    public TreeNode getHead() {
+        return head;
+    }
+
     @Override
     public String toString() {
-        BinaryTreePrinter.printVertical(head);
-//        BinaryTreePrinter.printHorizontal(head);
+//        BinaryTreePrinter.printVertical(head);
+        BinaryTreePrinter.printHorizontal(head);
         return "BinarySearchTree{ size=" + size + " }";
+    }
+
+    public void printHorizontal() {
+        BinaryTreePrinter.printHorizontal(head);
     }
 
 
