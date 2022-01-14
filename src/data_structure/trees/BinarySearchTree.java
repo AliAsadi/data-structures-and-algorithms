@@ -178,6 +178,10 @@ public class BinarySearchTree {
         BinaryTreePrinter.printHorizontal(head);
     }
 
+    public void printVertical() {
+        BinaryTreePrinter.printVertical(head);
+    }
+
 
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
