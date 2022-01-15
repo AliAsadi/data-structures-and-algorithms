@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Traversals {
 
-    private static void preorder(TreeNode root, List<Integer> list) {
+    public static void preorder(TreeNode root, List<Integer> list) {
         if (root == null) return;
         list.add(root.value);
         preorder(root.left, list);
