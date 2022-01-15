@@ -14,14 +14,9 @@ import java.util.Stack;
  */
 public class BinaryTreeInorderTraversal {
 
-    public static List<Integer> inorderDFS(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
-        Traversals.inorder(root, list);
-        return list;
-    }
-
     /**
      * Iterative solution
+     * Time: O(n)
      **/
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
@@ -40,6 +35,41 @@ public class BinaryTreeInorderTraversal {
         }
         return list;
     }
+
+    /**
+     * The same as "inorderTraversal()" with some modification for clarity.
+     * **/
+    public static List<Integer> inorderTraversal2(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+
+        Stack<TreeNode> stack = new Stack<>();
+        pushAllLeft(root, stack);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            res.add(cur.value);
+            pushAllLeft(cur.right, stack);
+        }
+        return res;
+    }
+
+    public static void pushAllLeft(TreeNode node, Stack<TreeNode> stack) {
+        while (node != null) {
+            stack.add(node);
+            node = node.left;
+        }
+    }
+
+
+    /**
+     * Dfs solution
+     * ***/
+    public static List<Integer> inorderDFS(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Traversals.inorder(root, list);
+        return list;
+    }
+
 
     public static void main(String[] args) {
 
