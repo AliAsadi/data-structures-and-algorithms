@@ -24,6 +24,18 @@ public class CountCompleteTreeNodes {
         return getTreeHeight(root.left) + 1;
     }
 
+    /**
+     * Binary Search
+     *
+     * Time: Log^2(n)
+     *
+     * O(h) * O(h) = O(h^2)
+     * h = height
+     *
+     * O(h^2) == Log^2(n)
+     *
+     * Note: Log^2(n) != Log(n^2)
+     * **/
     public static int countNodes(TreeNode root) {
         if (root == null) return 0;
 
@@ -35,9 +47,9 @@ public class CountCompleteTreeNodes {
         int left = 0;
         int right = lastLevelPossibleNodeCount;
 
-        while (left < right) {
+        while (left < right) { // O(h)
             int idx = (int) Math.ceil((left + right) / 2.0);
-            if (nodeExist(root, height, lastLevelPossibleNodeCount, idx)) {
+            if (nodeExist(root, height, lastLevelPossibleNodeCount, idx)) { // O(h)
                 left = idx;
             } else {
                 right = idx - 1;
