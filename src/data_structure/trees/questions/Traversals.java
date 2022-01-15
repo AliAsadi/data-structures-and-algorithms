@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * All DFS traversals (preorder, postorder, inorder)
  */
 public class Traversals {
 
