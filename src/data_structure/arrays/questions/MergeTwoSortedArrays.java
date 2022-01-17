@@ -2,7 +2,6 @@ package data_structure.arrays.questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.PriorityQueue;
 
 /**
  * Create a function that merge sorted arrays

@@ -2,13 +2,14 @@ package data_structure.arrays.questions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
  * Given K sorted arrays the task is to merge them into one sorted array.
  * input {{1,2,3},{4,5,6},{7,8,9}}
  * Output: {1,2,3,4,5,6,7,8,9}
+ *
+ * https://leetcode.com/problems/merge-k-sorted-lists/
  **/
 public class MergeKSortedArrays {
 
