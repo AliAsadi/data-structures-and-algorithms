@@ -1,7 +1,7 @@
 package data_structure.arrays.questions;
 
 /**
- * Create a function that reverses a a string.
+ * Create a function that reverses a string.
  * Input: "Hi My name is Ali"
  * Output: "ilA si eman yM iH"
  **/
