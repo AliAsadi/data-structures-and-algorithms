@@ -1,6 +1,7 @@
 package data_structure.linked_lists.questions;
 
 
+import data_structure.arrays.questions.MergeKSortedArrays;
 import data_structure.linked_lists.questions.utils.ListNode;
 
 import java.util.Comparator;
@@ -17,6 +18,8 @@ import static data_structure.linked_lists.questions.utils.Utils.sortedLinkedList
  * Output: {1,2,3,4,5,6,7,8,9}
  * <p>
  * https://leetcode.com/problems/merge-k-sorted-lists/
+ *
+ * @see MergeKSortedArrays
  **/
 public class MergeKSortedLinkedList {
 

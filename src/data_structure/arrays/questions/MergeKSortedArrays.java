@@ -1,5 +1,7 @@
 package data_structure.arrays.questions;
 
+import data_structure.linked_lists.questions.MergeKSortedLinkedList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
@@ -10,16 +12,18 @@ import java.util.PriorityQueue;
  * Output: {1,2,3,4,5,6,7,8,9}
  *
  * https://leetcode.com/problems/merge-k-sorted-lists/
+ *
+ * @see MergeKSortedLinkedList
  **/
 public class MergeKSortedArrays {
 
-    public static int[] mergeSortedArrays(int[][] arrays) { // List<List<Integer>> arrays
+    public static int[] mergeSortedArrays(int[][] arrays) {
         ArrayList<Integer> mergedSortedArray = new ArrayList<>();
 
         PriorityQueue<Integer> queue = new PriorityQueue<>();
         for (int i = 0; i < arrays.length; i++) {
             for (int j = 0; j < arrays[i].length; j++) {
-                queue.add(arrays[i][j]);
+                queue.add(arrays[i][j]); //O(log n)
             }
         }
 
@@ -30,7 +34,7 @@ public class MergeKSortedArrays {
         return mergedSortedArray.stream().mapToInt(Integer::intValue).toArray();
     }
 
-    public static String[] mergeSortedArrays(String[][] arrays) { // List<List<Integer>> arrays
+    public static String[] mergeSortedArrays(String[][] arrays) {
         ArrayList<String> mergedSortedArray = new ArrayList<>();
 
         PriorityQueue<String> queue = new PriorityQueue<>();
