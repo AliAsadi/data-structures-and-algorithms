@@ -53,8 +53,8 @@ public class RottingOranges {
                 int[] orangeIdx = queue.poll();
 
                 for (int[] direction : directions) {
-                    int i = direction[0] + orangeIdx[0];
-                    int j = direction[1] + orangeIdx[1];
+                    int i = direction[0] + orangeIdx[0];//x
+                    int j = direction[1] + orangeIdx[1];//y
 
                     if ((i >= 0) && (i < grid.length) && (j >= 0) && (j < grid[i].length) && grid[i][j] == 1) {
                         grid[i][j] = 2;
