@@ -1,6 +1,6 @@
-package data_structure.arrays.questions;
+package data_structure.arrays.questions.matrices;
 
-import data_structure.linked_lists.questions.MergeKSortedLinkedList;
+import data_structure.linked_lists.questions.matrices.MergeKSortedLinkedList;
 
 import java.util.ArrayList;
 import java.util.Arrays;

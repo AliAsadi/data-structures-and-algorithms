@@ -1,7 +1,7 @@
-package data_structure.linked_lists.questions;
+package data_structure.linked_lists.questions.matrices;
 
 
-import data_structure.arrays.questions.MergeKSortedArrays;
+import data_structure.arrays.questions.matrices.MergeKSortedArrays;
 import data_structure.linked_lists.questions.utils.ListNode;
 
 import java.util.Comparator;
