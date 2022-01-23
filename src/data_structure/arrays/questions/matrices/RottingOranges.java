@@ -1,7 +1,5 @@
 package data_structure.arrays.questions.matrices;
 
-import kotlin.Pair;
-
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -23,16 +21,8 @@ import java.util.Queue;
 public class RottingOranges {
 
     public static int orangesRotting(int[][] grid) {
-        int[][] directions = {
-                {-1, 0},//up
-                {1, 0},//down
-                {0, 1},//right
-                {0, -1}//left
-        };
-
-        int minutes = 0;
+        
         int fresh = 0;
-
         Queue<int[]> queue = new ArrayDeque<>();
 
         for (int i = 0; i < grid.length; i++) {
@@ -42,7 +32,20 @@ public class RottingOranges {
             }
         }
 
+        return bfs(grid, queue, fresh);
+    }
+
+    static int bfs(int[][] grid, Queue<int[]> queue, int fresh) {
         if (fresh == 0) return 0;
+
+        int[][] directions = {
+                {-1, 0},//up
+                {1, 0},//down
+                {0, 1},//right
+                {0, -1}//left
+        };
+
+        int minutes = 0;
 
         while (!queue.isEmpty()) {
             int rottenNum = queue.size();
