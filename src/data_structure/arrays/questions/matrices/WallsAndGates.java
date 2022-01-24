@@ -25,6 +25,10 @@ import java.util.Arrays;
  */
 public class WallsAndGates {
 
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     * **/
     public static void solution(int[][] grid) {
         for (int i = 0; i < grid.length; i++) {
             int[] row = grid[i];
@@ -35,7 +39,6 @@ public class WallsAndGates {
             }
         }
     }
-
 
     static void dfs(int[][] grid, int i, int j, int steps) {
         if ((i >= 0) && (i < grid.length) && (j >= 0) && (j < grid[i].length) && grid[i][j] >= steps) {
