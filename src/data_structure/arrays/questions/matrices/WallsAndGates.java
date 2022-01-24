@@ -38,7 +38,7 @@ public class WallsAndGates {
 
 
     static void dfs(int[][] grid, int i, int j, int steps) {
-        if ((i >= 0) && (i < grid.length) && (j >= 0) && (j < grid[i].length) && grid[i][j] != -1 && grid[i][j] >= steps) {
+        if ((i >= 0) && (i < grid.length) && (j >= 0) && (j < grid[i].length) && grid[i][j] >= steps) {
             grid[i][j] = steps;
 
             dfs(grid, i - 1, j, steps + 1);//up
