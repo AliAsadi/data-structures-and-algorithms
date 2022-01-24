@@ -17,7 +17,7 @@ import java.util.Arrays;
  * 2 2 1 W
  * 1 W 2 W
  * <p>
- * space = 9
+ * space = 999
  * gate = 0
  * wall = -1
  * <p>
@@ -50,10 +50,10 @@ public class WallsAndGates {
 
     public static void main(String[] args) {
         int[][] maze = new int[][]{
-                {9, -1, 0, 9},
-                {9, 9, 9, -1},
-                {9, -1, 9, -1},
-                {0, -1, 9, 9}
+                {999, -1, 0, 999},
+                {999, 999, 999, -1},
+                {999, -1, 999, -1},
+                {0, -1, 999, 999}
         };
 
         solution(maze);
