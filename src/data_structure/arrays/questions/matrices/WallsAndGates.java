@@ -107,8 +107,8 @@ public class WallsAndGates {
                 {0, -1, 999, 999}
         };
 
-//        solution(maze);
-        solutionBfs(maze);
+        solution(maze);
+//        solutionBfs(maze);
         System.out.println(Arrays.deepToString(maze));
     }
 }
