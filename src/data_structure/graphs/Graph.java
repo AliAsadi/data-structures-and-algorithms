@@ -36,7 +36,7 @@ public class Graph {
             for (int edge : nodeConnections) {
                 connections.append(edge).append(" ");
             }
-            System.out.println(node + "-->" + connections);
+            System.out.println(node + "--> " + connections);
         }
     }
 
