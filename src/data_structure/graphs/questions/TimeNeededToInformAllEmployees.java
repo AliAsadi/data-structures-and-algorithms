@@ -33,7 +33,7 @@ public class TimeNeededToInformAllEmployees {
         }
         System.out.println(graph);
 
-        return  dfs(graph, informTime, headID);
+        return dfs(graph, informTime, headID);
     }
 
     private static int dfs(HashMap<Integer, ArrayList<Integer>> graph, int[] informTime, int cur) {
