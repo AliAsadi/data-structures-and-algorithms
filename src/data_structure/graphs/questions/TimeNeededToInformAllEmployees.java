@@ -25,6 +25,10 @@ public class TimeNeededToInformAllEmployees {
 
     private static final HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>();
 
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     * **/
     public static int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
         for (int employee = 0; employee < manager.length; employee++) {
             int employeeManager = manager[employee];
