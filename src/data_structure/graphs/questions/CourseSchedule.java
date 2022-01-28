@@ -47,8 +47,12 @@ public class CourseSchedule {
      **/
 
 
+    /**
+     * Time: O(n^3)
+     * Space: O(n^2)
+     * **/
     public static boolean canFinish(int numCourses, int[][] prerequisites) {
-        final HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>();
+        final HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>(); // (hashMap = n && arraylist = n) (nxn) n^2
 
         for (int i = 0; i < prerequisites.length; i++) {
             int[] pair = prerequisites[i];
@@ -62,21 +66,22 @@ public class CourseSchedule {
         return bfs(numCourses, graph);
     }
 
+
     static boolean bfs(int numCourses, HashMap<Integer, ArrayList<Integer>> graph) {
-        for (Integer course : graph.keySet()) {
+        for (Integer course : graph.keySet()) { //n
             Queue<Integer> queue = new LinkedList<>();
             boolean[] seen = new boolean[numCourses];
 
             if (graph.get(course) != null) queue.addAll(graph.get(course));
 
-            while (!queue.isEmpty()) {
+            while (!queue.isEmpty()) { //n
                 Integer current = queue.poll();
                 seen[current] = true;
 
                 if (current.equals(course)) return false;
 
                 if (graph.get(current) != null) {
-                    for (int i = 0; i < graph.get(current).size(); i++) {
+                    for (int i = 0; i < graph.get(current).size(); i++) { //n
                         Integer next = graph.get(current).get(i);
                         if (!seen[next]) {
                             queue.add(next);
