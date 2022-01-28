@@ -1,4 +1,4 @@
-package data_structure.arrays.questions.matrices;
+package data_structure.arrays.questions.matrices.graph;
 
 /**
  * Given an m x n 2D binary grid which represents a map of '1's (land) and '0's (water),

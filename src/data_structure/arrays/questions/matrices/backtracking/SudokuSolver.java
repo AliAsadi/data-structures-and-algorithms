@@ -1,4 +1,4 @@
-package data_structure.graphs.questions.backtracking;
+package data_structure.arrays.questions.matrices.backtracking;
 
 import java.util.Arrays;
 

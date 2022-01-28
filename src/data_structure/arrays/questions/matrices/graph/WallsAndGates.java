@@ -1,4 +1,4 @@
-package data_structure.arrays.questions.matrices;
+package data_structure.arrays.questions.matrices.graph;
 
 import java.util.Arrays;
 import java.util.LinkedList;
