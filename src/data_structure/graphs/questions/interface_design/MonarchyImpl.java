@@ -1,26 +1,12 @@
-package data_structure.graphs.questions;
+package data_structure.graphs.questions.interface_design;
 
 import java.util.*;
 
 
-interface MonarchyInterface {
-    void birth(String child, String parent);
-    void death(String name);
-    List<String> getOrderOfSuccession();
-}
-
 /**
- * Implement the MonarchyInterface the interface.
+ * Implement the Monarchy the interface.
  */
-public class Monarchy implements MonarchyInterface {
-
-    private final Map<String, Person> persons = new HashMap<>();
-    private final Person king;
-
-    Monarchy(String king) {
-        this.king = new Person(king);
-        persons.put(king, this.king);
-    }
+public class MonarchyImpl implements Monarchy {
 
     static class Person {
         String name;
@@ -32,6 +18,13 @@ public class Monarchy implements MonarchyInterface {
         }
     }
 
+    private final Map<String, Person> persons = new HashMap<>();
+    private final Person king;
+
+    MonarchyImpl(String king) {
+        this.king = new Person(king);
+        persons.put(king, this.king);
+    }
 
     @Override
     public void birth(String child, String parent) {
@@ -65,7 +58,7 @@ public class Monarchy implements MonarchyInterface {
     }
 
     public static void main(String[] args) {
-        Monarchy monarchy = new Monarchy("Jake");
+        MonarchyImpl monarchy = new MonarchyImpl("Jake");
         monarchy.birth("Catherine", "Jake");
         monarchy.birth("Tom", "Jake");
         monarchy.birth("Celine", "Jake");
