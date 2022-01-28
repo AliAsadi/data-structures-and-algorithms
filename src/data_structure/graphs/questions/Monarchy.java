@@ -2,12 +2,19 @@ package data_structure.graphs.questions;
 
 import java.util.*;
 
+
+interface MonarchyInterface {
+    void birth(String child, String parent);
+    void death(String name);
+    List<String> getOrderOfSuccession();
+}
+
 /**
- *
+ * Implement the MonarchyInterface the interface.
  */
 public class Monarchy implements MonarchyInterface {
 
-    private Map<String, Person> persons = new HashMap<>();
+    private final Map<String, Person> persons = new HashMap<>();
     private final Person king;
 
     Monarchy(String king) {
@@ -72,10 +79,4 @@ public class Monarchy implements MonarchyInterface {
         monarchy.death("Jane");
         System.out.println(monarchy.getOrderOfSuccession());
     }
-}
-
-interface MonarchyInterface {
-    void birth(String child, String parent);
-    void death(String name);
-    List<String> getOrderOfSuccession();
 }
