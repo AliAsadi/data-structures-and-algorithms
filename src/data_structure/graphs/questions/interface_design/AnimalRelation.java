@@ -7,78 +7,82 @@ import java.util.*;
  */
 public class AnimalRelation {
 
-    static class Animal {
-        String name;
-        Animal parent;
-        List<Animal> children = new ArrayList<>();
 
-        public Animal(String name) {
-            this.name = name;
+    static class Solution1 {
+
+        void printTree(List<Relation> relationList) {
+            Map<String, List<String>> graph = new HashMap<>();
+            HashSet<String> children = new HashSet<>();
+            for (Relation relation : relationList) {
+                children.add(relation.child);
+                if (!graph.containsKey(relation.parent)) graph.put(relation.parent, new ArrayList<>());
+                graph.get(relation.parent).add(relation.child);
+            }
+
+            String root = "";
+            for (String parent : graph.keySet()) {
+                if (!children.contains(parent)) root = parent;
+            }
+
+            dfs(graph, root);
         }
+
+        void dfs(Map<String, List<String>> graph, String animal) {
+            System.out.print(animal + " ");
+            if (graph.containsKey(animal)) {
+                for (String child : graph.get(animal)) {
+                    dfs(graph, child);
+                }
+            }
+        }
+
     }
 
-    /**
-     * Solution 1
-     ***/
-    private static void printTree2(List<Relation> relationList) {
-        HashMap<String, Animal> animals = new HashMap<>();
+    static class Solution2 {
 
-        for (Relation relation : relationList) {
-            if (!animals.containsKey(relation.parent)) animals.put(relation.parent, new Animal(relation.parent));
-            if (!animals.containsKey(relation.child))  animals.put(relation.child, new Animal(relation.child));
 
-            Animal parent = animals.get(relation.parent);
-            Animal child = animals.get(relation.child);
+        static class Animal {
+            String name;
+            Animal parent;
+            List<Animal> children = new ArrayList<>();
 
-            parent.children.add(child);
-            child.parent = parent;
+            public Animal(String name) {
+                this.name = name;
+            }
         }
 
+        void printTree(List<Relation> relationList) {
+            HashMap<String, Animal> animals = new HashMap<>();
 
-        Animal root = null;
-        for (Animal animal : animals.values()) {
-            if (animal.parent == null) root = animal;
+            for (Relation relation : relationList) {
+                if (!animals.containsKey(relation.parent)) animals.put(relation.parent, new Animal(relation.parent));
+                if (!animals.containsKey(relation.child)) animals.put(relation.child, new Animal(relation.child));
+
+                Animal parent = animals.get(relation.parent);
+                Animal child = animals.get(relation.child);
+
+                parent.children.add(child);
+                child.parent = parent;
+            }
+
+
+            Animal root = null;
+            for (Animal animal : animals.values()) {
+                if (animal.parent == null) root = animal;
+            }
+
+            dfs(root);
         }
 
-        dfs(root);
-    }
+        void dfs(Animal animal) {
+            System.out.print(animal.name + " ");
 
-    static void dfs(Animal animal) {
-        System.out.print(animal.name + " ");
-
-        if (!animal.children.isEmpty()) {
-            for (Animal child : animal.children) dfs(child);
-        }
-    }
-
-    /**
-     * Solution 1
-     ***/
-    private static void printTree(List<Relation> relationList) {
-        Map<String, List<String>> graph = new HashMap<>();
-        HashSet<String> children = new HashSet<>();
-        for (Relation relation : relationList) {
-            children.add(relation.child);
-            if (!graph.containsKey(relation.parent)) graph.put(relation.parent, new ArrayList<>());
-            graph.get(relation.parent).add(relation.child);
-        }
-
-        String root = "";
-        for (String parent : graph.keySet()) {
-            if (!children.contains(parent)) root = parent;
-        }
-
-        dfs(graph, root);
-    }
-
-    static void dfs(Map<String, List<String>> graph, String animal) {
-        System.out.print(animal + " ");
-        if (graph.containsKey(animal)) {
-            for (String child : graph.get(animal)) {
-                dfs(graph, child);
+            if (!animal.children.isEmpty()) {
+                for (Animal child : animal.children) dfs(child);
             }
         }
     }
+
 
     public static void main(String[] args) {
 
@@ -96,8 +100,8 @@ public class AnimalRelation {
         //cat -> lion
         //mamal -> cat
 
-//        printTree(relationList);
-        printTree2(relationList);
+//        new Solution1().printTree(relationList);
+        new Solution2().printTree(relationList);
     }
 }
 
