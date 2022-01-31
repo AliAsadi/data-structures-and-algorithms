@@ -1,6 +1,7 @@
 package data_structure.trees.questions;
 
 import data_structure.trees.BinarySearchTree;
+import data_structure.trees.utils.BinaryTreePrinter;
 import data_structure.trees.utils.TreeNode;
 
 /**
@@ -10,19 +11,31 @@ import data_structure.trees.utils.TreeNode;
  */
 public class CloneBinaryTree {
 
-//    static TreeNode cloneTree(BinarySearchTree tree) {
-//
-//
-//    }
-//    public static void main(String[] args) {
-//
-//        BinarySearchTree tree = new BinarySearchTree();
-//        tree.add(100);
-//        tree.add(120);
-//        tree.add(90);
-//        tree.add(95);
-//        tree.add(80);
-//
-//        cloneTree(tree);
-//    }
+    static TreeNode cloneTree(TreeNode node) {
+        return cloneDfs(node);
+    }
+
+    static TreeNode cloneDfs(TreeNode node) {
+        if (node == null) return null;
+
+        TreeNode newNode = new TreeNode(node.value);
+        newNode.left = cloneTree(node.left);
+        newNode.right = cloneTree(node.right);
+
+        return newNode;
+    }
+
+    public static void main(String[] args) {
+
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(100);
+        tree.add(120);
+        tree.add(90);
+        tree.add(95);
+        tree.add(80);
+
+
+        tree.printVertical();
+        BinaryTreePrinter.printVertical(cloneTree(tree.getHead()));
+    }
 }
