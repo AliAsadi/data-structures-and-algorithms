@@ -20,6 +20,7 @@ public class CloneGraph {
     }
 
     private static Node bfs(Node node) {
+        if (node == null) return null;
         Map<Integer, Node> map = new HashMap<>();
         Queue<Node> queue = new LinkedList<>();
 
