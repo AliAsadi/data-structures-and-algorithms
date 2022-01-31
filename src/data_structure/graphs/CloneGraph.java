@@ -49,6 +49,21 @@ public class CloneGraph {
     }
 
 
+    static Map<Integer, Node> map = new HashMap<>();
+
+    private static Node cloneDfs(Node node) {
+        if (map.containsKey(node.val)) return map.get(node.val);
+
+        Node newNode = new Node(node.val, new ArrayList<>());
+        map.put(node.val, newNode);
+        for (Node neighbor : node.neighbors) {
+            newNode.neighbors.add(cloneDfs(neighbor));
+        }
+
+        return newNode;
+    }
+
+
     static void bfsPrintUndirectedGraph(Node node) {
         Map<Integer, List<Integer>> map = new HashMap<>();
 
