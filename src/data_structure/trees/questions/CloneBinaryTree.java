@@ -34,7 +34,6 @@ public class CloneBinaryTree {
         tree.add(95);
         tree.add(80);
 
-
         tree.printVertical();
         BinaryTreePrinter.printVertical(cloneTree(tree.getHead()));
     }
