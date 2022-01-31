@@ -20,6 +20,16 @@ public class CloneBinaryTree {
         return cloneDfs(node);
     }
 
+    static TreeNode cloneDfs(TreeNode node) {
+        if (node == null) return null;
+
+        TreeNode newNode = new TreeNode(node.value);
+        newNode.left = cloneTree(node.left);
+        newNode.right = cloneTree(node.right);
+
+        return newNode;
+    }
+
     static TreeNode cloneBfs(TreeNode node) {
         Queue<TreeNode> queue = new LinkedList<>();
         Map<Integer, TreeNode> map = new HashMap<>();
@@ -48,16 +58,6 @@ public class CloneBinaryTree {
         }
 
         return map.get(root);
-    }
-
-    static TreeNode cloneDfs(TreeNode node) {
-        if (node == null) return null;
-
-        TreeNode newNode = new TreeNode(node.value);
-        newNode.left = cloneTree(node.left);
-        newNode.right = cloneTree(node.right);
-
-        return newNode;
     }
 
     public static void main(String[] args) {
