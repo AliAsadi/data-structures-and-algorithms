@@ -1,4 +1,4 @@
-package data_structure.graphs;
+package data_structure.graphs.questions;
 
 
 import java.util.*;
