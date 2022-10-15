@@ -58,9 +58,7 @@ public class NetworkDelayTime {
             int currNodeTime = node.getTime();
 
             boolean noDirectionFromThisNode = !adjacencyList.containsKey(currNode);
-
-            if (currNodeTime > distances[currNode] || noDirectionFromThisNode) continue;
-
+            if (noDirectionFromThisNode) continue;
 
             for (NodeInfo edge : adjacencyList.get(currNode)) {
                 int time = edge.getTime();
