@@ -100,8 +100,10 @@ public class NetworkDelayTime {
     }
 
     public static void main(String[] args) {
-        int value = networkDelayTime(new int[][]{{2, 1, 1}, {2, 3, 1}, {3, 4, 1}}, 4, 2);
+//        int value = networkDelayTime(new int[][]{{2, 1, 1}, {2, 3, 1}, {3, 4, 1}}, 4, 2);
 //        int value = networkDelayTime(new int[][]{{1, 2, 1}}, 2, 1);
+        int value = networkDelayTime(new int[][]{{1, 2, 9}, {1, 4, 2}, {2, 5, 1}, {4, 2, 4}, {4, 5, 6}, {5, 3, 7}, {3, 2, 3}, {3, 1, 5}}, 5, 1);
+
         System.out.println(value);
     }
 }
