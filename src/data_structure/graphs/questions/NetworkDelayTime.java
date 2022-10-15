@@ -23,27 +23,40 @@ import java.util.*;
  */
 public class NetworkDelayTime {
 
-    static class NodeInfo {
-        int time;
-        int node;
+    /**
+     * Solution: DIJKSTRA
+     **/
+    public static int networkDelayTime(int[][] times, int n, int k) {
 
-        public NodeInfo(int time, int node) {
-            this.time = time;
-            this.node = node;
-        }
+        // Build the adjacency list
+        Map<Integer, List<NodeInfo>> adjacencyList = buildAdjacencyList(times);
 
-        public int getTime() {
-            return time;
-        }
+        int[] distances = dijkstra(adjacencyList, n, k);
 
-        public int getNode() {
-            return node;
-        }
+        int answer = Integer.MIN_VALUE;
+        for (int i = 1; i <= n; i++) answer = Math.max(answer, distances[i]);
+
+        return answer == Integer.MAX_VALUE ? -1 : answer;
     }
 
-    static Map<Integer, List<NodeInfo>> adjacencyList = new HashMap<>();
+    private static Map<Integer, List<NodeInfo>> buildAdjacencyList(int[][] times) {
+        Map<Integer, List<NodeInfo>> adjacencyList = new HashMap<>();
 
-    private static void dijkstra(int[] distances, int entryNode) {
+        for (int[] time : times) {
+            int source = time[0];
+            int dest = time[1];
+            int travelTime = time[2];
+
+            adjacencyList.putIfAbsent(source, new ArrayList<>());
+            adjacencyList.get(source).add(new NodeInfo(travelTime, dest));
+        }
+
+        return adjacencyList;
+    }
+
+    private static int[] dijkstra(Map<Integer, List<NodeInfo>> adjacencyList, int totalNumberOfNodes, int entryNode) {
+        int[] distances = createDistancesArray(totalNumberOfNodes);
+
         Queue<NodeInfo> queue = new PriorityQueue<>(Comparator.comparing(NodeInfo::getTime));
 
         queue.add(new NodeInfo(0, entryNode));
@@ -70,32 +83,34 @@ public class NetworkDelayTime {
                 }
             }
         }
+
+        return distances;
     }
 
-    /**
-     * Solution: DIJKSTRA
-     **/
-    public static int networkDelayTime(int[][] times, int n, int k) {
-        // Build the adjacency list
-        for (int[] time : times) {
-            int source = time[0];
-            int dest = time[1];
-            int travelTime = time[2];
-
-            adjacencyList.putIfAbsent(source, new ArrayList<>());
-            adjacencyList.get(source).add(new NodeInfo(travelTime, dest));
-        }
-
+    private static int[] createDistancesArray(int n) {
         int[] distances = new int[n + 1];
         Arrays.fill(distances, Integer.MAX_VALUE);
-
-        dijkstra(distances, k);
-
-        int answer = Integer.MIN_VALUE;
-        for (int i = 1; i <= n; i++) answer = Math.max(answer, distances[i]);
-
-        return answer == Integer.MAX_VALUE ? -1 : answer;
+        return distances;
     }
+
+    static class NodeInfo {
+        int time;
+        int node;
+
+        public NodeInfo(int time, int node) {
+            this.time = time;
+            this.node = node;
+        }
+
+        public int getTime() {
+            return time;
+        }
+
+        public int getNode() {
+            return node;
+        }
+    }
+
 
     public static void main(String[] args) {
 //        int value = networkDelayTime(new int[][]{{2, 1, 1}, {2, 3, 1}, {3, 4, 1}}, 4, 2);
