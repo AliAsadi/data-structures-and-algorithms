@@ -1,4 +1,4 @@
-package data_structure.arrays;
+package data_structure.arrays.questions;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,6 +6,13 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ *
+ * Write a generic data type for a deque and a randomized queue. The goal of this assignment is to implement elementary
+ * data structures using arrays and linked lists, and to introduce you to generics and iterators.
+ *
+ * https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php
+ * **/
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
     private int N = 10;
@@ -135,8 +142,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             builder.append(integer).append(", ");
         });
 
-        System.out.println("queue: " + builder.toString());
+        System.out.println("queue: " + builder);
         System.out.println("size = " + queue.size());
-        System.out.println(queue.toString());
+        System.out.println(queue);
     }
 }
