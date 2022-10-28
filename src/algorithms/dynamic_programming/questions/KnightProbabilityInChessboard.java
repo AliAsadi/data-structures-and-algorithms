@@ -26,11 +26,38 @@ package algorithms.dynamic_programming.questions;
  */
 public class KnightProbabilityInChessboard {
 
-    public double knightProbability(int n, int k, int row, int column) {
-        return 0;
+    static int[][] directions = new int[][]{{-2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}};
+
+
+    /**
+     * https://leetcode.com/problems/knight-probability-in-chessboard/discuss/162722/Simple-Java-DP-solution-with-explanation
+     * **/
+    public static double knightProbability(int n, int moves, int row, int column) {
+        double [][][] ways = new double[moves+1][n][n];
+        ways[0][row][column]=1;
+        for(int m=1; m<=moves;++m){
+            for(int i=0; i<n;++i){
+                for(int j=0; j<n;++j){
+                    for(int [] dir: directions){
+                        int oldR = i-dir[0];
+                        int oldC = j-dir[1];
+                        if(oldR>=0 && oldC>=0 && oldR<n && oldC<n){
+                            ways[m][i][j]+=(ways[m-1][oldR][oldC]/8.0);
+                        }
+                    }
+                }
+            }
+        }
+        double res = 0;
+        for(int i=0; i<n;++i){
+            for(int j=0; j<n;++j){
+                res+=ways[moves][i][j];
+            }
+        }
+        return res;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(knightProbability(3, 2, 0, 0));
     }
 }
