@@ -1,21 +1,19 @@
-package union_find;
+package data_structure.union_find;
 
 /******************************************************************************
- *  Compilation:  javac unionfind.QuickFindUF.java
- *  Execution:  java unionfind.QuickFindUF < input.txt
+ *  Compilation:  javac WeightedQuickUnionUF.java
+ *  Execution:  java WeightedQuickUnionUF < input.txt
  *  Dependencies: StdIn.java StdOut.java
  *  Data files:   https://algs4.cs.princeton.edu/15uf/tinyUF.txt
  *                https://algs4.cs.princeton.edu/15uf/mediumUF.txt
  *                https://algs4.cs.princeton.edu/15uf/largeUF.txt
  *
- *  Quick-find algorithm.
+ *  Weighted quick-union (without path compression).
  *
  ******************************************************************************/
 
-import java.util.Arrays;
-
 /**
- * The {@code unionfind.QuickFindUF} class represents a <em>union–find data type</em>
+ * The {@code WeightedQuickUnionUF} class represents a <em>union–find data type</em>
  * (also known as the <em>disjoint-sets data type</em>).
  * It supports the classic <em>union</em> and <em>find</em> operations,
  * along with a <em>count</em> operation that returns the total number
@@ -47,12 +45,13 @@ import java.util.Arrays;
  * itself changes during a call to <em>union</em>&mdash;it cannot
  * change during a call to either <em>find</em> or <em>count</em>.
  * p>
- * This implementation uses <em>quick find</em>.
- * The constructor takes &Theta;(<em>n</em>) time, where <em>n</em>
- * is the number of sites.
- * The <em>find</em>, <em>connected</em>, and <em>count</em>
- * operations take &Theta;(1) time; the <em>union</em> operation
- * takes &Theta;(<em>n</em>) time.
+ * This implementation uses <em>weighted quick union by size</em>
+ * (without path compression).
+ * The constructor takes &Theta;(<em>n</em>), where <em>n</em>
+ * is the number of elements.
+ * The <em>union</em> and <em>find</em>
+ * operations  take &Theta;(log <em>n</em>) time in the worst
+ * case. The <em>count</em> operation takes &Theta;(1) time.
  * p>
  * For alternative implementations of the same API, see
  * For additional documentation, see
@@ -62,10 +61,10 @@ import java.util.Arrays;
  * @author Robert Sedgewick
  * @author Kevin Wayne
  */
-
-public class QuickFindUF {
-    private int[] arr;    // id[i] = component identifier of i
-    private int count;   // number of components
+public class WeightedQuickUnionUF {
+    private int[] parent;   // parent[i] = parent of i
+    private int[] size;     // size[i] = number of elements in subtree rooted at i
+    private int count;      // number of components
 
     /**
      * Initializes an empty union-find data structure with
@@ -75,11 +74,14 @@ public class QuickFindUF {
      * @param n the number of elements
      * @throws IllegalArgumentException if {@code n < 0}
      */
-    public QuickFindUF(int n) {
+    public WeightedQuickUnionUF(int n) {
         count = n;
-        arr = new int[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = i;
+        parent = new int[n];
+        size = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+            size[i] = 1;
+        }
     }
 
     /**
@@ -100,15 +102,9 @@ public class QuickFindUF {
      */
     public int find(int p) {
         validate(p);
-        return arr[p];
-    }
-
-    // validate that p is a valid index
-    private void validate(int p) {
-        int n = arr.length;
-        if (p < 0 || p >= n) {
-            throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n - 1));
-        }
+        while (p != parent[p])
+            p = parent[p];
+        return p;
     }
 
     /**
@@ -124,9 +120,15 @@ public class QuickFindUF {
      */
     @Deprecated
     public boolean connected(int p, int q) {
-        validate(p);
-        validate(q);
-        return arr[p] == arr[q];
+        return find(p) == find(q);
+    }
+
+    // validate that p is a valid index
+    private void validate(int p) {
+        int n = parent.length;
+        if (p < 0 || p >= n) {
+            throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n - 1));
+        }
     }
 
     /**
@@ -139,25 +141,18 @@ public class QuickFindUF {
      *                                  both {@code 0 <= p < n} and {@code 0 <= q < n}
      */
     public void union(int a, int b) {
-        validate(a);
-        validate(b);
+        int rootA = find(a);
+        int rootB = find(b);
+        if (rootA == rootB) return;
 
-        // p and q are already in the same component
-        if (connected(a, b)) return;
-
-        int aID = arr[a];   // needed for correctness
-        int bID = arr[b];   // to reduce the number of array accesses
-
-        for (int i = 0; i < arr.length; i++)
-            if (arr[i] == aID) arr[i] = bID;
+        // make smaller root point to larger one
+        if (size[rootA] < size[rootB]) {
+            parent[rootA] = rootB;
+            size[rootB] += size[rootA];
+        } else {
+            parent[rootB] = rootA;
+            size[rootA] += size[rootB];
+        }
         count--;
-    }
-
-    @Override
-    public String toString() {
-        return "unionfind.QuickFindUF{" +
-                "arr=" + Arrays.toString(arr) +
-                ", count=" + count +
-                '}';
     }
 }

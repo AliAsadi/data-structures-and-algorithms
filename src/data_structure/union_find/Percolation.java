@@ -1,4 +1,4 @@
-package union_find;
+package data_structure.union_find;
 
 public class Percolation {
 
