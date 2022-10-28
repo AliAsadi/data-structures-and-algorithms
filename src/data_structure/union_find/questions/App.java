@@ -1,4 +1,7 @@
-package data_structure.union_find;
+package data_structure.union_find.questions;
+
+import data_structure.union_find.QuickFindUF;
+import data_structure.union_find.QuickUnionUF;
 
 public class App {
     public static void main(String[] args) {
