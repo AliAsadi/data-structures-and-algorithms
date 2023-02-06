@@ -2,7 +2,7 @@
 
 This repository contains solutions to various coding questions from Leetcode. Whether you are preparing for a technical interview or just want to improve your coding skills, this repository is an excellent resource to have in your arsenal.
 
-# Structure 
+# Project Structure 
 
 The repository is organized by topic, with each question having its own class. At the top of each class, you will find the full details of the question, including a URL to the original question on Leetcode. This makes it easy to navigate and find the solution you are looking for.
 
