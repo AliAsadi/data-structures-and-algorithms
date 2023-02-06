@@ -11,3 +11,7 @@ The repository is organized by topic, with each question having its own class. A
 ### Example:
 
 ![image](https://user-images.githubusercontent.com/20803775/217065893-bf278988-0fa7-45e6-b79e-ad2888acd3ed.png)
+
+# Contributing
+
+If you have a better solution for a question or want to add more information about the solution's time and space complexity, your contributions are greatly appreciated!
