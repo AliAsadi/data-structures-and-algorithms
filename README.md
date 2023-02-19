@@ -1,6 +1,6 @@
 # Data Structures & Algorithms 
 
-This repository contains solutions to various coding questions from Leetcode. Whether you are preparing for a technical interview or just want to improve your coding skills, this repository is an excellent resource to have in your arsenal.
+This repository contains solutions to various coding questions from Leetcode.
 
 # Project Structure 
 
